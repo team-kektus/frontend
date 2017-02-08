@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend project for course \"Web Application Development\" in University of Tartu.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/team-kektus/frontend.git"
+  },
+  "author": "Markus Peterson, Kristjan Puusepp, Silver Liivamägi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/team-kektus/frontend/issues"
+  },
+  "homepage": "https://github.com/team-kektus/frontend#readme"
+}
