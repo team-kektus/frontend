@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "description": "Frontend project for course \"Web Application Development\" in University of Tartu.\"",
+  "main": "",
+  "authors": [
+    "Markus Peterson",
+    "Kristjan Puusepp",
+    "Silver Liivamägi"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/team-kektus/frontend",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

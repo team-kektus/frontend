@@ -1,6 +1,0 @@
-{
-  "app": {
-    "root": "app/",
-    "fallback": "app/index.html"
-  }
-}
