@@ -4,8 +4,8 @@
     "fallback": "app/index.html",
     "index": "app/index.html",
     "injectorder": [
-      "app/lib/js/*.js",
       "app/lib/css/*.css"
+      "app/lib/js/*.js",
     ]
   },
   "lib": {

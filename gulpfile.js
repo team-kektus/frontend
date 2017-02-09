@@ -44,9 +44,14 @@ gulp.task('bower:fonts', function () {
 gulp.task('bower', gulp.parallel('bower:js', 'bower:css', 'bower:fonts'))
 
 gulp.task('inject', function () {
+  var root = config.app.root
+
   return gulp.src(config.app.index)
-    .pipe(inject(gulp.src(config.app.injectorder)))
-    .pipe(gulp.dest(config.app.root))
+    .pipe(inject(gulp.src(config.app.injectorder), {
+      ignorePath: root,
+      addRootSlash: false
+    }))
+    .pipe(gulp.dest(root))
 })
 
 gulp.task('clean', function (done) {
