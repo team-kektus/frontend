@@ -1,9 +1,11 @@
 const gulp = require('gulp');
 const connect = require('gulp-connect');
+const cached = require('gulp-cached');
 const sass = require('gulp-sass');
 const inject = require('gulp-inject');
 const proxymiddleware = require('http-proxy-middleware');
 const del = require('del');
+const sourcemaps = require('gulp-sourcemaps');
 
 const config = require('./config.json');
 const assets = require('bower-files')(config.bowerConfig);
@@ -63,6 +65,19 @@ gulp.task('clean', function (done) {
   return del(to_delete)
 })
 
-gulp.task('build', gulp.series('clean', 'bower', 'inject'))
+gulp.task('watch', function () {
+  return gulp.watch(config.app.sass, gulp.series('compile', 'inject'))
+})
 
-gulp.task('default', gulp.series('build', 'server'))
+gulp.task('compile', function () {
+  return gulp.src(config.app.sass)
+    .pipe(cached('sass'))
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(config.app.root))
+})
+
+gulp.task('build', gulp.series('clean', 'bower', 'compile', 'inject'))
+
+gulp.task('default', gulp.series('build', gulp.parallel('server', 'watch')))

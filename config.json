@@ -3,6 +3,7 @@
     "root": "app/",
     "fallback": "app/index.html",
     "index": "app/index.html",
+    "sass": "app/**/*.scss",
     "injectorder": [
       "app/lib/css/*.css",
       "app/lib/js/*.js"
