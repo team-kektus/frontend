@@ -30,9 +30,10 @@ h6 {
     font-weight: 400;
 }
 
-.vertical-offset-100{
-    padding-top:100px;
+.vertical-offset-100 {
+  
 }
+
 
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
@@ -41,6 +42,10 @@ h6 {
     color: #f8f8f8;
     background: url("img/ut.jpg") no-repeat center center;
     background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
 }
 
 .intro-message {
@@ -56,7 +61,7 @@ h6 {
 }
 
 .intro-divider {
-    width: 400px;
+    /* width: 400px;*/
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
@@ -160,6 +165,12 @@ h6 {
 footer {
     padding: 20px 0;
     background-color: #f8f8f8;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
 }
 
 p.copyright {
