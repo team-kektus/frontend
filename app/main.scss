@@ -30,11 +30,6 @@ h6 {
     font-weight: 400;
 }
 
-.vertical-offset-100 {
-
-}
-
-
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
@@ -176,4 +171,12 @@ footer {
 
 p.copyright {
     margin: 15px 0 0;
+}
+
+.vcenter {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
 }
