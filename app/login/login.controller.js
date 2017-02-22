@@ -1,6 +1,11 @@
 class LoginController {
-  constructor() {
+  constructor($window) {
+    this.$window = $window
     console.log('Initializing LoginController');
+  }
+
+  goToApp() {
+    this.$window.location.href = '/app.html'
   }
 }
 
@@ -8,5 +13,6 @@ class LoginController {
 
 angular.module('kektus.login')
   .controller('LoginController', [
-    LoginController
+    '$window',
+    LoginController,
   ])
