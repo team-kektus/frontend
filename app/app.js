@@ -3,6 +3,7 @@ angular.module('kektus', [
   'kektus.components',
   'kektus.signup',
   'kektus.login',
+  'kektus.profile',
 ])
 
 angular.module('kektus')
