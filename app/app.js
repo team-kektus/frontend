@@ -1,5 +1,6 @@
 angular.module('kektus', [
   'ui.router',
+  'kektus.components',
   'kektus.signup',
   'kektus.login',
 ])

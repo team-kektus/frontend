@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="lib/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="components/footer/footer.css">
     <!-- endinject -->
 
 
@@ -38,18 +39,16 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    Header
-
     <a ui-sref='signup'>Signup</a>
     <a ui-sref='login'>Login</a>
 
     <div class="container">
       <div ui-view>
-        Main page
+        No scimmerino pls.
       </div>
     </div>
 
-    Footer
+    <footer></footer>
 
 
     <!-- inject:js -->
@@ -57,12 +56,16 @@
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/angular.min.js"></script>
     <script src="lib/js/angular-ui-router.js"></script>
+    <script src="components/components.module.js"></script>
     <script src="login/login.module.js"></script>
     <script src="signup/signup.module.js"></script>
+    <script src="components/footer/footer.module.js"></script>
     <script src="app.js"></script>
     <script src="login/login.controller.js"></script>
     <script src="routes/signup.route.js"></script>
     <script src="signup/signup.controller.js"></script>
+    <script src="components/footer/footer.component.js"></script>
+    <script src="components/footer/footer.controller.js"></script>
     <!-- endinject -->
   </body>
 </html>
