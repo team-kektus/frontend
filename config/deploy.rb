@@ -58,7 +58,7 @@ namespace :deploy do
 
   task :restart_app do
     on roles(:app) do
-      execute "pm2 startOrRestart #{user_path}/pm2_conf/frontend.ecosystem.js"
+      execute "pm2 startOrRestart #{user_path}/pm2_conf/frontend.ecosystem.json"
     end
   end
 
