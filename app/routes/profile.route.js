@@ -3,12 +3,20 @@ angular.module('kektus')
     $stateProvider
       .state('profile', {
         url: '/profile',
-        views: {
-          '@': {
-            templateUrl: 'profile/profile.template.html',
-            controller: 'ProfileController',
-            controllerAs: 'ctrl'
-          }
-        }
+        templateUrl: 'profile/profile.template.html',
+        controller: 'ProfileController',
+        controllerAs: 'ctrl'
+      })
+      .state('profile.dashboard', {
+        url: '/dashboard',
+        templateUrl: 'profile/dashboard/dashboard.template.html',
+        controller: 'ProfileDashboardController',
+        controllerAs: 'ctrl'
+      })
+      .state('profile.settings', {
+        url: '/settings',
+        templateUrl: 'profile/settings/settings.template.html',
+        controller: 'ProfileSettingsController',
+        controllerAs: 'ctrl'
       })
   })

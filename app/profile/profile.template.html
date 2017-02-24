@@ -27,16 +27,16 @@
         <div class="profile-usermenu">
           <ul class="nav">
             <li class="active">
-              <a href="#">
-                <i class="glyphicon glyphicon-home"></i> Ülevaade </a>
+              <a ui-sref="profile.dashboard">
+                <i class="glyphicon glyphicon-home"></i>Ülevaade</a>
+            </li>
+            <li>
+              <a ui-sref="profile.settings">
+                <i class="glyphicon glyphicon-user"></i>Kasutaja sätted</a>
             </li>
             <li>
               <a href="#">
-                <i class="glyphicon glyphicon-user"></i> Kasutaja sätted </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="glyphicon glyphicon-flag"></i> Abi </a>
+                <i class="glyphicon glyphicon-flag"></i>Abi</a>
             </li>
           </ul>
         </div>
@@ -44,8 +44,8 @@
       </div>
     </div>
     <div class="col-md-9">
-      <div class="profile-content">
-        Some user related content goes here...
+      <div ui-view class="profile-content">
+
       </div>
     </div>
   </div>
