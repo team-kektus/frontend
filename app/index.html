@@ -21,6 +21,12 @@
   <!-- Custom Fonts -->
   <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  
+  <script>
+		function newDoc() {
+			window.location.assign("profile.html")
+		}
+</script>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,10 +58,10 @@
         <ul class="nav navbar-nav navbar-right">
 
           <li>
-            <a href="#services">Asjad</a>
+            <a href="aboutus.html">Asjad</a>
           </li>
           <li>
-            <a href="#contact">Kontakt</a>
+            <a href="kontakt.html">Kontakt</a>
           </li>
         </ul>
       </div>
@@ -84,7 +90,9 @@
                 <div class="form-group">
                   <input class="form-control" placeholder="Password" name="password" type="password" value="">
                 </div>
-                <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+                <!--<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">-->
+				<!--<button class="btn btn-lg btn-success btn-block" onclick="newDoc()">Login</button>-->
+				<input class="btn btn-lg btn-success btn-block" type="button" value="Login" onclick="newDoc()">
               </fieldset>
             </form>
           </div>
@@ -110,11 +118,11 @@
             </li>
             <li class="footer-menu-divider">&sdot;</li>
             <li>
-              <a href="#services">Meist</a>
+              <a href="aboutus.html">Meist</a>
             </li>
             <li class="footer-menu-divider">&sdot;</li>
             <li>
-              <a href="#contact">Kontakt</a>
+              <a href="kontakt.html">Kontakt</a>
             </li>
           </ul>
           <p class="copyright text-muted small">Copyright &copy; Team Kektus. Kõik õigused reserveeritud.</p>
