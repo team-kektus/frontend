@@ -29,6 +29,11 @@
           "fonts/glyphicons-halflings-regular.woff",
           "fonts/glyphicons-halflings-regular.woff2"
         ]
+      },
+      "angular": {
+        "main": [
+          "angular.min.js"
+        ]
       }
     }
   }
