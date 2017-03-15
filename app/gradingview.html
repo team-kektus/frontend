@@ -108,12 +108,27 @@
       <!-- Grading table begin -->
       <div ng-controller="AsdCtrl as asd">
           <table>
-              <tr ng-repeat="person in asd.persons">
-                  <td>{{ person.first_name }}</td>
-                  <td>{{ person.last_name }}</td>
+              <tr>
+          			<td>&nbsp;</td>
+                <td>&nbsp;</td>
+          			<td>Punktid</td>
+          			<td>Tähtaeg</td>
+          			<td>Esitamise etapp</td>
+          			<td>Punktid</td>
+          			<td>Märkused </td>
+          		</tr>
+              <tr ng-repeat="hinne in asd.persons">
+                <td>{{ hinne.number }}</td>
+                <td>{{ hinne.description }}</td>
+                <td>{{ hinne.first_name }}</td>
+                <td>{{ hinne.last_name }}</td>
+                <td>{{ hinne.datetime }}</td>
+                <td>{{ hinne.esitamise_etapp}}</td>
               </tr>
           </table>
       </div>
+
+
 
       <!-- Grading table end -->
 
