@@ -31,7 +31,7 @@
 
 </head>
 
-<body>
+<body ng-app="overview">
 
   <div class="container">
     <div class="row profile">
@@ -73,32 +73,15 @@
       <div class="col-md-9">
         <div class="profile-content">
           Some user related content goes here...
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Võte</th>
-                <th>Punktid</th>
-                <th>Esitamise tähtaeg</th>
+          <div ng-controller="OverviewCtrl as overview">
+            <table>
+              <tr ng-repeat="team in overview.teams">
+                <td>{{ team.teamname }}</td>
+                <td>Katki</td>
+                <td>{{ team.teamname2 }}</td>
               </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1.1</td>
-                <td>1</td>
-                <td>1096969</td>
-              </tr>
-              <tr>
-                <td>1.2</td>
-                <td>1</td>
-                <td>19.04.1779</td>
-              </tr>
-              <tr>
-                <td>1.3</td>
-                <td>1.5</td>
-                <td>20.08.1925</td>
-              </tr>
-            </tbody>
-          </table>
+            </table>
+          </div>
 
         </div>
       </div>
@@ -109,7 +92,11 @@
 
   <!-- jQuery -->
 
+  <script src="lib/js/angular.min.js"></script>
+
   <script src="lib/js/jquery.js"></script>
+
+  <script src="overview.js"></script>
 
   <!-- Bootstrap Core JavaScript -->
   <script src="lib/js/bootstrap.min.js"></script>
