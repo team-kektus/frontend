@@ -1,6 +1,9 @@
 class LoginController {
-  constructor($window) {
+  constructor(Api, $location) {
     console.log('Initializing LoginController');
+
+    this.Api = Api
+    this.$location = $location
 
     this.screen = 'login'
     this.model = {}
@@ -26,7 +29,10 @@ class LoginController {
   }
 
   login() {
-    console.log(this.model);
+    let vm = this
+    this.Api.login(this.model).then(function (response) {
+      vm.$location.path('/account')
+    })
   }
 
   forgotPassword() {
@@ -34,7 +40,20 @@ class LoginController {
   }
 
   register() {
-    console.log(this.model);
+    let vm = this
+    if (this.is_valid(this.model))
+      this.Api.register(this.model).then(function (response) {
+        vm.$location.path('/login')
+      })
+    else
+      console.log("form is not valid");
+  }
+
+  is_valid(params) {
+    if (params.agreed && params.password === params.rpassword)
+      return true
+    else
+      return false
   }
 }
 
@@ -42,5 +61,7 @@ class LoginController {
 
 angular.module('kektus.login')
   .controller('LoginController', [
+    'Api',
+    '$location',
     LoginController,
   ])

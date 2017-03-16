@@ -12,6 +12,8 @@
       "app/lib/js/*.js",
       "app/**/*.css",
       "app/app.js",
+      "app/API.js",
+      "app/**/*.route.js",
       "app/**/*.module.js",
       "app/**/*.js"
     ]
@@ -43,8 +45,18 @@
         ]
       },
       "angular": {
-        "main" :[
+        "main": [
           "angular.min.js"
+        ]
+      },
+      "lodash": {
+        "main": [
+          "dist/lodash.min.js"
+        ]
+      },
+      "restangular": {
+        "main": [
+          "dist/restangular.min.js"
         ]
       }
     }
