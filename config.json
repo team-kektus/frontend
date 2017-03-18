@@ -12,7 +12,7 @@
       "app/lib/js/*.js",
       "app/**/*.css",
       "app/app.js",
-      "app/API.js",
+      "app/api.js",
       "app/**/*.route.js",
       "app/**/*.module.js",
       "app/**/*.js"

@@ -14,6 +14,10 @@ class Api {
   register(params) {
     return this.Restangular.all('users').post(params)
   }
+
+  getAccount() {
+    return this.Restangular.one('account').get()
+  }
 }
 
 

@@ -14,11 +14,11 @@ const assets = require('bower-files')(config.bowerConfig);
 gulp.task('server', function () {
   connect.server({
     root: config.app.root,
-    port: 8000,
+    port: 9000,
     livereload: true,
     fallback: config.app.fallback,
     middleware: function () {
-      apiProxy = proxymiddleware('/api', {
+      apiProxy = proxymiddleware('/api/', {
         target: 'http://localhost:7000',
         pathRewrite: {'^/api': ''}
       });

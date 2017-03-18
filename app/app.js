@@ -3,13 +3,15 @@ angular.module('kektus', [
   'restangular',
   'kektus.components',
   'kektus.login',
+  'kektus.account',
+  'kektus.main'
 ])
 
 angular.module('kektus')
   .config(function ($locationProvider, $urlRouterProvider, $stateProvider) {
     $locationProvider.html5Mode(true)
 
-    $urlRouterProvider.otherwise('/login')
+    $urlRouterProvider.otherwise('/')
   })
 
   .config(function (RestangularProvider) {

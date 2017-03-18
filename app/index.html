@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="components/footer/footer.css">
     <link rel="stylesheet" href="css/global/components-md.css">
     <link rel="stylesheet" href="css/global/plugins-md.css">
-    <link rel="stylesheet" href="css/pages/login.css">
     <link rel="stylesheet" href="css/layout/layout.css">
+    <link rel="stylesheet" href="css/pages/login.css">
     <link rel="stylesheet" href="css/layout/themes/default.css">
     <!-- endinject -->
 
@@ -38,19 +38,17 @@
 
   </head>
 
-  <body ng-controller="MainController as mainctrl" class="page-md">
+  <body ng-controller="MainController as mainctrl">
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <a ui-sref='login'>Login</a>
-    <a ui-sref='account'>Account</a>
 
-    <div ui-view>
+    <div id="body" class="page-md" ui-view>
     </div>
 
-    <footer ng-hide="mainctrl.show_footer"></footer
+    <footer ng-show="mainctrl.footer_visible"></footer
 
 
     <!-- inject:js -->
@@ -61,16 +59,20 @@
     <script src="lib/js/lodash.min.js"></script>
     <script src="lib/js/restangular.min.js"></script>
     <script src="app.js"></script>
-    <script src="API.js"></script>
+    <script src="api.js"></script>
     <script src="routes/account.route.js"></script>
     <script src="routes/login.route.js"></script>
+    <script src="routes/main.route.js"></script>
     <script src="account/account.module.js"></script>
     <script src="components/components.module.js"></script>
     <script src="login/login.module.js"></script>
+    <script src="main/main.module.js"></script>
     <script src="components/footer/footer.module.js"></script>
     <script src="app.controller.js"></script>
     <script src="account/account.controller.js"></script>
     <script src="login/login.controller.js"></script>
+    <script src="main/main.controller.js"></script>
+    <script src="routes/root.routes.js"></script>
     <script src="components/footer/footer.component.js"></script>
     <script src="components/footer/footer.controller.js"></script>
     <!-- endinject -->

@@ -4,8 +4,8 @@ class MainController {
     this.$state = $state
   }
 
-  get show_footer() {
-    return this.$state.includes('login')
+  get footer_visible() {
+    return !this.$state.includes('login')
   }
 }
 

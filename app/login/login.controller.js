@@ -31,7 +31,7 @@ class LoginController {
   login() {
     let vm = this
     this.Api.login(this.model).then(function (response) {
-      vm.$location.path('/account')
+      vm.$location.path('/')
     })
   }
 
@@ -43,7 +43,7 @@ class LoginController {
     let vm = this
     if (this.is_valid(this.model))
       this.Api.register(this.model).then(function (response) {
-        vm.$location.path('/login')
+        vm.goToLogin()
       })
     else
       console.log("form is not valid");

@@ -1,13 +1,13 @@
 angular.module('kektus')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('login', {
-        parent: 'unprotected',
-        url: '/login/',
+      .state('main', {
+        parent: 'protected',
+        url: '/',
         views: {
           '@': {
-            templateUrl: 'login/login.template.html',
-            controller: 'LoginController',
+            templateUrl: 'main/main.template.html',
+            controller: 'MainPageController',
             controllerAs: 'ctrl'
           }
         }
