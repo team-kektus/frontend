@@ -2,7 +2,7 @@ angular.module('kektus')
   .config(function ($stateProvider) {
     $stateProvider
       .state('login', {
-        parent: 'unprotected',
+        parent: 'public',
         url: '/login/',
         views: {
           '@': {

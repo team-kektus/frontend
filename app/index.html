@@ -38,17 +38,21 @@
 
   </head>
 
-  <body ng-controller="MainController as mainctrl">
+  <body ng-controller="MainController as mainctrl" class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo page-on-load">
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <div spinner-bar class="page-spinner-bar">
+  		<div class="bounce1"></div>
+  		<div class="bounce2"></div>
+  		<div class="bounce3"></div>
+  	</div>
 
-    <div id="body" class="page-md" ui-view>
+
+    <div id="body" ui-view>
     </div>
-
-    <footer ng-show="mainctrl.footer_visible"></footer
 
 
     <!-- inject:js -->
@@ -63,18 +67,20 @@
     <script src="routes/account.route.js"></script>
     <script src="routes/login.route.js"></script>
     <script src="routes/main.route.js"></script>
+    <script src="routes/root.route.js"></script>
     <script src="account/account.module.js"></script>
     <script src="components/components.module.js"></script>
     <script src="login/login.module.js"></script>
     <script src="main/main.module.js"></script>
     <script src="components/footer/footer.module.js"></script>
+    <script src="components/spinnerbar/spinnerbar.module.js"></script>
     <script src="app.controller.js"></script>
     <script src="account/account.controller.js"></script>
     <script src="login/login.controller.js"></script>
     <script src="main/main.controller.js"></script>
-    <script src="routes/root.routes.js"></script>
     <script src="components/footer/footer.component.js"></script>
     <script src="components/footer/footer.controller.js"></script>
+    <script src="components/spinnerbar/spinnerbar.directive.js"></script>
     <!-- endinject -->
   </body>
 </html>

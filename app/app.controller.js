@@ -3,10 +3,6 @@ class MainController {
 
     this.$state = $state
   }
-
-  get footer_visible() {
-    return !this.$state.includes('login')
-  }
 }
 
 angular.module('kektus')

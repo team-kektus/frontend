@@ -5,7 +5,7 @@ angular.module('kektus')
         parent: 'protected',
         url: '/account/',
         views: {
-          '@': {
+          '': {
             templateUrl: 'account/account.template.html',
             controller: 'AccountController',
             controllerAs: 'ctrl'

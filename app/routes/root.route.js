@@ -28,10 +28,15 @@ angular.module('kektus')
               $state.go('root')
             })
           }
+        },
+        views: {
+          '': {
+            templateUrl: 'abstract_views/protected.template.html'
+          }
         }
       })
 
-      .state('unprotected', {
+      .state('public', {
         abstract: true
       })
   })
