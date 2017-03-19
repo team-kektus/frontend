@@ -12,7 +12,7 @@ angular.module('kektus')
               path = '/login/'
 
             $location.path(path)
-            window.location.reload()
+            // window.location.reload()
 
           }
         }
