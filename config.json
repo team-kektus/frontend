@@ -58,6 +58,26 @@
         "main": [
           "dist/restangular.min.js"
         ]
+      },
+      "simple-line-icons": {
+        "main": [
+          "css/simple-line-icons.css",
+          "fonts/Simple-Line-Icons.eot",
+          "fonts/Simple-Line-Icons.svg",
+          "fonts/Simple-Line-Icons.ttf",
+          "fonts/Simple-Line-Icons.woff",
+          "fonts/Simple-Line-Icons.woff2"
+        ]
+      },
+      "font-awesome": {
+        "main": [
+          "css/font-awesome.min.css",
+          "fonts/fontawesome-webfont.eot",
+          "fonts/fontawesome-webfont.svg",
+          "fonts/fontawesome-webfont.ttf",
+          "fonts/fontawesome-webfont.woff",
+          "fonts/fontawesome-webfont.woff2"
+        ]
       }
     }
   }

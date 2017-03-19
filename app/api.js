@@ -11,6 +11,10 @@ class Api {
     return this.Restangular.all('auth').post(params)
   }
 
+  logout() {
+    return this.Restangular.one('auth').one('logout').get()
+  }
+
   register(params) {
     return this.Restangular.all('users').post(params)
   }
