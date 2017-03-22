@@ -22,6 +22,12 @@ class Api {
   getAccount() {
     return this.Restangular.one('account').get()
   }
+
+// Vaata see mttoed üle!!!
+  saveChanges(params) {
+    return this.Restangular.one('account').put(params)
+  }
+
 }
 
 
