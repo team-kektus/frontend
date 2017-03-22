@@ -1,0 +1,45 @@
+
+      <!-- Grading table begin -->
+      <div ng-controller="AsdCtrl as asd">
+          <table>
+              <tr>
+          			<td>&nbsp;</td>
+                <td>&nbsp;</td>
+          			<td>Punktid</td>
+          			<td>Tähtaeg</td>
+          			<td>Esitamise etapp</td>
+          			<td>Punktid</td>
+          			<td>Märkused </td>
+          		</tr>
+              <tr ng-repeat="hinne in asd.persons">
+                <td>{{ hinne.number }}</td>
+                <td>{{ hinne.description }}</td>
+                <td>{{ hinne.first_name }}</td>
+                <td>{{ hinne.last_name }}</td>
+                <td>{{ hinne.datetime }}</td>
+                <td>{{ hinne.esitamise_etapp}}</td>
+              </tr>
+              <tr>
+          			<td>&nbsp;</td>
+                <td>&nbsp;</td>
+          			<td>&nbsp;</td>
+          			<td>&nbsp;</td>
+          			<td>1. etapp</td>
+          			<td>2. etapp</td>
+                <td>3. etapp</td>
+          			<td>4. etapp</td>
+                <td>5. etapp</td>
+          			<td>6. etapp</td>
+                <td>7. etapp</td>
+          			<td>8. etapp</td>
+          		</tr>
+              <tr ng-repeat="hinne in asd.persons">
+                <td>&nbsp;</td>
+                <td>{{ hinne.kehtivus}}</td>
+                <td>{{ hinne.kehtivusepunktid}}</td>
+                <td>&nbsp;</td>
+                <td>{{ hinne.etapp1 }}</td>
+
+              </tr>
+          </table>
+      </div>

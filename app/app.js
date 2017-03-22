@@ -4,7 +4,8 @@ angular.module('kektus', [
   'kektus.components',
   'kektus.login',
   'kektus.account',
-  'kektus.main'
+  'kektus.main',
+  'kektus.grading',
 ])
 
 angular.module('kektus')
