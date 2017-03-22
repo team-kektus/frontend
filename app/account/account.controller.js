@@ -1,16 +1,17 @@
 class AccountController {
-  constructor(Api, $location) {
+  constructor(Api, $state) {
     console.log('Initializing AccountController');
 
     this.Api = Api
-    this.$location = $location
+    this.$state = $state
 
     this.model = {}
   }
 
   saveChanges() {
     this.Api.saveChanges(this.model).then(() => {
-      window.alert("ok");
+      window.alert("ok")
+      this.$state.reload()
     })
     //else {console.log("something went wrong");}
   }
@@ -22,6 +23,6 @@ class AccountController {
 angular.module('kektus.login')
   .controller('AccountController', [
     'Api',
-    '$location',
+    '$state',
     AccountController,
   ])
