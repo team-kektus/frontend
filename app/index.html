@@ -18,12 +18,11 @@
     <link rel="stylesheet" href="lib/css/font-awesome.min.css">
     <link rel="stylesheet" href="lib/css/simple-line-icons.css">
     <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="components/footer/footer.css">
     <link rel="stylesheet" href="css/global/components-md.css">
     <link rel="stylesheet" href="css/global/plugins-md.css">
     <link rel="stylesheet" href="css/layout/layout.css">
     <link rel="stylesheet" href="css/pages/login.css">
-    <link rel="stylesheet" href="components/footer/footer.css">
     <link rel="stylesheet" href="css/layout/themes/default.css">
     <!-- endinject -->
 
@@ -40,7 +39,7 @@
 
   </head>
 
-  <body ng-controller="MainController as mainctrl" class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo page-on-load">
+  <body ng-controller="MainController as mainctrl" class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo page-on-load" ng-class="{'page-sidebar-closed': Layout.sidebar_is_closed}">
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
