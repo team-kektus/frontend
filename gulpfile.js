@@ -17,13 +17,6 @@ gulp.task('server', function () {
     port: 9000,
     livereload: true,
     fallback: config.app.fallback,
-    middleware: function () {
-      apiProxy = proxymiddleware('/api/', {
-        target: 'http://localhost:7000',
-        pathRewrite: {'^/api': ''}
-      });
-      return [apiProxy];
-    }
   })
 })
 

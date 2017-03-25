@@ -17,7 +17,7 @@ angular.module('kektus')
   .config(function (RestangularProvider) {
     RestangularProvider.setFullResponse(true)
     RestangularProvider
-      .setBaseUrl('api/v1')
+      .setBaseUrl('/api/v1')
       .setRequestSuffix('.json')
       .setDefaultHeaders({'Content-Type': 'application/json; charset=UTF-8'})
   })
