@@ -7,7 +7,7 @@ angular.module('kektus')
         views: {
           '': {
             templateUrl: 'grading/grading.template.html',
-            controller: 'AsdCtrl',
+            controller: 'GradingController',
             controllerAs: 'ctrl'
           }
         }
