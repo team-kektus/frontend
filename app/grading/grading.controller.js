@@ -1,5 +1,9 @@
 class GradingController {
-  constructor() {
+  constructor(Api, $location) {
+
+    this.Api = Api
+    this.$location = $location
+
     this.persons = [
 
     {isaspect: 'true', number: '1.1', description: 'Andmete salvestamine andmebaasi',first_name: '1', last_name: '2', datetime: '', esitamise_etapp:'1', id:'0', punktid:'1'},
@@ -18,6 +22,11 @@ class GradingController {
     }
 
   }
+
+  getTeamPoints() {
+
+  }
+
   modify(tableData){
     this.editingData[tableData.id] = true;
   };
@@ -31,5 +40,7 @@ class GradingController {
 
 angular.module('kektus.grading')
   .controller('GradingController', [
+    'Api',
+    '$location',
     GradingController
 ])
