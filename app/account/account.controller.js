@@ -16,6 +16,11 @@ class AccountController {
     //else {console.log("something went wrong");}
   }
 
+  handleFiles(e) {
+    console.log(e);
+    console.log(this.model);
+  }
+
 }
 
 

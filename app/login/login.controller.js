@@ -55,6 +55,14 @@ class LoginController {
     else
       return false
   }
+
+  facebookLogin() {
+    console.log("init facebook login")
+    console.log(FB);
+    FB.login(response => {
+      console.log(response)
+    })
+  }
 }
 
 
