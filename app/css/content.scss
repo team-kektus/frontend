@@ -1,0 +1,42 @@
+.header_color {
+  background: #3B3F51;
+}
+
+.dropdown_menu {
+  float: right;
+  padding:20px;
+  list-style-type: none;
+}
+
+.menu_box {
+  padding: 25px;
+}
+
+.name_color {
+  color:white;
+  font-family:"Courier New", Courier, monospace;
+  font-size: 1.3em;
+}
+
+
+.toggled_menu {
+  width: 200px;
+  right: 0;
+  position: absolute;
+  float: right;
+}
+
+@media (max-width:280px) {
+  .hide_name {
+    display: none;
+  }
+}
+@media (max-width:991px) {
+  .push_down {
+    margin-top:75px;
+  }
+}
+
+.force_scrollable {
+  overflow:auto !important;
+}
