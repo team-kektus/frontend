@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="lib/css/font-awesome.min.css">
     <link rel="stylesheet" href="lib/css/simple-line-icons.css">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="css/header_css.css">
+    <link rel="stylesheet" href="css/page_content.css">
     <link rel="stylesheet" href="components/footer/footer.css">
     <link rel="stylesheet" href="css/global/components-md.css">
     <link rel="stylesheet" href="css/global/plugins-md.css">
@@ -52,7 +54,7 @@
   	</div>
 
 
-    <div id="body" ui-view>
+    <div id="body" ui-view class="force_scrollable">
     </div>
 
 
@@ -66,17 +68,20 @@
     <script src="app.js"></script>
     <script src="api.js"></script>
     <script src="routes/account.route.js"></script>
+    <script src="routes/grading.route.js"></script>
     <script src="routes/login.route.js"></script>
     <script src="routes/main.route.js"></script>
     <script src="routes/root.route.js"></script>
     <script src="account/account.module.js"></script>
     <script src="components/components.module.js"></script>
+    <script src="grading/grading.module.js"></script>
     <script src="login/login.module.js"></script>
     <script src="main/main.module.js"></script>
     <script src="components/footer/footer.module.js"></script>
     <script src="components/spinnerbar/spinnerbar.module.js"></script>
     <script src="app.controller.js"></script>
     <script src="account/account.controller.js"></script>
+    <script src="grading/grading.controller.js"></script>
     <script src="login/login.controller.js"></script>
     <script src="main/main.controller.js"></script>
     <script src="components/footer/footer.component.js"></script>

@@ -238,3 +238,10 @@ footer {
     }
   }
 }
+@media all and (max-width: 991px) {
+.hide_footer_icons { display: none; }
+}
+
+@media all and (max-width: 768px) {
+.hide_footer_icons2 { display: none; }
+}
