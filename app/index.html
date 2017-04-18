@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="kektus" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="kektus" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="kektus" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="kektus" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" data-ng-app="kektus" class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="components/footer/footer.css">
     <link rel="stylesheet" href="css/global/components-md.css">
     <link rel="stylesheet" href="css/global/plugins-md.css">
-    <link rel="stylesheet" href="css/pages/login.css">
     <link rel="stylesheet" href="css/layout/layout.css">
+    <link rel="stylesheet" href="css/pages/login.css">
     <link rel="stylesheet" href="css/layout/themes/default.css">
     <!-- endinject -->
 
@@ -40,7 +40,7 @@
 
   </head>
 
-  <body ng-controller="MainController as mainctrl" class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo page-on-load" ng-class="{'page-sidebar-closed': Layout.sidebar_is_closed}">
+  <body data-ng-controller="MainController as mainctrl" class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo page-on-load" data-ng-class="{'page-sidebar-closed': Layout.sidebar_is_closed}">
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -53,7 +53,7 @@
   	</div>
 
 
-    <div id="body" ui-view class="force_scrollable">
+    <div id="body" data-ui-view class="force_scrollable">
     </div>
 
 
@@ -76,16 +76,16 @@
     <script src="grading/grading.module.js"></script>
     <script src="login/login.module.js"></script>
     <script src="main/main.module.js"></script>
-    <script src="components/footer/footer.module.js"></script>
     <script src="components/spinnerbar/spinnerbar.module.js"></script>
+    <script src="components/footer/footer.module.js"></script>
     <script src="app.controller.js"></script>
     <script src="account/account.controller.js"></script>
     <script src="grading/grading.controller.js"></script>
     <script src="login/login.controller.js"></script>
     <script src="main/main.controller.js"></script>
+    <script src="components/spinnerbar/spinnerbar.directive.js"></script>
     <script src="components/footer/footer.component.js"></script>
     <script src="components/footer/footer.controller.js"></script>
-    <script src="components/spinnerbar/spinnerbar.directive.js"></script>
     <!-- endinject -->
   </body>
 </html>
