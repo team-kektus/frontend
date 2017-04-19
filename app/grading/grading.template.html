@@ -1,7 +1,7 @@
 <div ng-show="{{ currentUser.is_professor }}">
-<div class="lead">Team Sample</div>
-      <div ng-controller="GradingController as asd">
-          <table class="table table-sm">
+<div class="lead push_down">Team Sample</div>
+      <div id="scrollmenu" ng-controller="GradingController as asd">
+          <table class="table table-sm scrollmenu">
               <tr>
           			<td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -83,7 +83,7 @@
           </table>
 
       </div>
-    </div>
+  </div>
 
   <div ng-show="{{ !currentUser.is_professor }}">
     Mis sa siia ronid?
