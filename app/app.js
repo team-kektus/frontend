@@ -22,7 +22,7 @@ angular.module('kektus')
       .setDefaultHeaders({'Content-Type': 'application/json; charset=UTF-8'})
   })
 
-  .run(function ($rootScope) {
+  .run(function ($rootScope, $window) {
     $rootScope.Layout = {
       'sidebar_is_closed': false
     }

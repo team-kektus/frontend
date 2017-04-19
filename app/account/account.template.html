@@ -72,15 +72,16 @@
 									</div>
 									<div>
 										<span class="btn default btn-file">
-										<span class="fileinput-new">
-										Select image </span>
-										<span class="fileinput-exists">
-										Change </span>
-										<input type="file" name="...">
+											<span class="fileinput-new">
+											Select image </span>
+											<span class="fileinput-exists">
+											Change </span>
+											<input type="file" name="..." ng-change="ctrl.handleFiles(event)" ng-model="this.model.avatar">
 										</span>
 										<a href="#" class="btn default fileinput-exists" data-dismiss="fileinput">
 										Remove </a>
 									</div>
+									<a ng-click="ctrl.handleFiles(event)">asd</a>
 								</div>
 								<div class="clearfix margin-top-10">
 									<span class="label label-danger">NOTE! </span>

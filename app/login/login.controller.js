@@ -55,6 +55,14 @@ class LoginController {
     else
       return false
   }
+
+  facebookLogin() {
+    FB.login(response => {
+      this.Api.socialLogin('facebook', response.authResponse.accessToken).then(() => {
+        this.$location.path('/')
+      })
+    }, { scope: 'email' })
+  }
 }
 
 
