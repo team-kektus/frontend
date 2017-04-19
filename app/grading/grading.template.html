@@ -1,0 +1,90 @@
+<div ng-show="{{ currentUser.is_professor }}">
+<div class="lead push_down">Team Sample</div>
+      <div id="scrollmenu" ng-controller="GradingController as asd">
+          <table class="table table-sm scrollmenu">
+              <tr>
+          			<td>&nbsp;</td>
+                <td>&nbsp;</td>
+          			<td>Punktid</td>
+          			<td>Tähtaeg</td>
+          			<td>Esitamise etapp</td>
+          			<td>Punktid</td>
+          			<td>Märkused </td>
+          		</tr>
+              <tr ng-repeat="hinne in asd.persons | filter: hinne.isaspect='true'">
+                <td>{{ hinne.number }}</td>
+                <td>{{ hinne.description }}</td>
+                <td>{{hinne.first_name}}</td>
+                <td>{{hinne.last_name}}</td>
+                <td>
+                  <div ng-hide="asd.editingData[hinne.id]">{{hinne.datetime}}</div>
+                  <div ng-show="asd.editingData[hinne.id]"><input size="10" type="text" ng-model="hinne.datetime" /></div>
+                </td>
+                <td>
+                  <div ng-hide="asd.editingData[hinne.id]">{{hinne.esitamise_etapp}}</div>
+                  <div ng-show="asd.editingData[hinne.id]"><input size="10" type="text" ng-model="hinne.esitamise_etapp" /></div>
+                </td>
+                <td>Märk</td>
+                <td>
+                  <button class="btn btn-primary btn-sm" ng-hide="asd.editingData[hinne.id]" ng-click="asd.modify(hinne)">Muuda</button>
+                  <button class="btn btn-primary btn-sm" ng-show="asd.editingData[hinne.id]" ng-click="asd.update(hinne)">Salvesta</button>
+                </td>
+
+              </tr>
+            </table>
+            <table class="table table-sm">
+              <tr>
+          			<td>&nbsp;</td>
+                <td>Punktid</td>
+          			<td>1. etapp</td>
+          			<td>2. etapp</td>
+                <td>3. etapp</td>
+          			<td>4. etapp</td>
+                <td>5. etapp</td>
+          			<td>6. etapp</td>
+                <td>7. etapp</td>
+          			<td>8. etapp</td>
+          		</tr>
+              <tr ng-repeat="hinne in asd.persons | filter: hinne.isaspect='false'">
+                <td>{{ hinne.kehtivus}}</td>
+                <td>
+                  {{hinne.kehtivusepunktid}}
+                  <!-- <div ng-hide="asd.editingData[hinne.id]">{{hinne.kehtivusepunktid}}</div>
+                  <div ng-show="asd.editingData[hinne.id]"><input type="text" ng-model="hinne.kehtivusepunktid" /></div> -->
+                </td>
+                <td>
+                  <div ng-hide="asd.editingData[hinne.id]">{{hinne.etapp1}}</div>
+                  <div ng-show="asd.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp1"/></div>
+                </td>
+                <td>
+                  <div ng-hide="asd.editingData[hinne.id]">{{hinne.etapp2}}</div>
+                  <div ng-show="asd.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp2"/></div>
+                </td>
+                <td>
+                  <div ng-hide="asd.editingData[hinne.id]">{{hinne.etapp3}}</div>
+                  <div ng-show="asd.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp3"/></div>
+                </td>
+                <td>
+                  <div ng-hide="asd.editingData[hinne.id]">{{hinne.etapp4}}</div>
+                  <div ng-show="asd.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp4"/></div>
+                </td>
+                <td>
+                  <div ng-hide="asd.editingData[hinne.id]">{{hinne.etapp5}}</div>
+                  <div ng-show="asd.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp5"/></div>
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>
+                  <button class="btn btn-primary btn-sm" ng-hide="asd.editingData[hinne.id]" ng-click="asd.modify(hinne)">Muuda</button>
+                  <button class="btn btn-primary btn-sm" ng-show="asd.editingData[hinne.id]" ng-click="asd.update(hinne)">Salvesta</button>
+                </td>
+              </tr>
+          </table>
+
+      </div>
+  </div>
+
+  <div ng-show="{{ !currentUser.is_professor }}">
+    Mis sa siia ronid?
+  </div>
