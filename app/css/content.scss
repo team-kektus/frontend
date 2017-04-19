@@ -38,7 +38,12 @@
 }
 
 .force_scrollable {
-  overflow:auto !important;
+  overflow: auto !important;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
 }
 
 .img_resize {
