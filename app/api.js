@@ -11,6 +11,13 @@ class Api {
     return this.Restangular.all('auth').post(params)
   }
 
+  socialLogin(provider, accessToken) {
+    return this.Restangular.all('auth').all('social').post({
+      provider: provider,
+      access_token: accessToken
+    })
+  }
+
   logout() {
     return this.Restangular.one('auth').one('logout').get()
   }
