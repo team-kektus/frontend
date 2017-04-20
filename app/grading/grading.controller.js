@@ -25,8 +25,11 @@ class GradingController {
   openHelpModal(url) {
     if (url) {
       this.modal_body.load(`${url} #wikitext`)
-      this.modal.modal('show')
     }
+    else {
+       this.modal_body.text("OK LOL XD")
+    }
+    this.modal.modal('show')
   }
 }
 
