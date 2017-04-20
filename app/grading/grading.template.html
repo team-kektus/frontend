@@ -1,130 +1,122 @@
 <div id="aspectHelpModal" class="modal fade" role="dialog">
-   <div class="modal-dialog">
-     <div class="modal-content">
-       <div class="modal-body">
-         <p>Palun oodake.</p>
-       </div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
-       </div>
-     </div>
-   </div>
- </div>
-
-<div ng-show="{{ currentUser.is_professor }}">
-<!-- <div class="lead push_down">Team Sample</div> -->
-      <div id="scrollmenu" class="push_down" ng-controller="GradingController as ctrl">
-        <!--  <table class="table table-sm scrollmenu">
-              <tr>
-          			<td>&nbsp;</td>
-                <td>&nbsp;</td>
-          			<td>Punktid</td>
-          			<td>Tähtaeg</td>
-          			<td>Esitamise etapp</td>
-          			<td>Punktid</td>
-          			<td>Märkused </td>
-          		</tr>
-              <tr ng-repeat="hinne in ctrl.persons | filter: hinne.isaspect='true'">
-                <td>{{ hinne.number }}</td>
-                <td>{{ hinne.description }}</td>
-                <td>{{hinne.first_name}}</td>
-                <td>{{hinne.last_name}}</td>
-                <td>
-                  <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.datetime}}</div>
-                  <div ng-show="ctrl.editingData[hinne.id]"><input size="10" type="text" ng-model="hinne.datetime" /></div>
-                </td>
-                <td>
-                  <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.esitamise_etapp}}</div>
-                  <div ng-show="ctrl.editingData[hinne.id]"><input size="10" type="text" ng-model="hinne.esitamise_etapp" /></div>
-                </td>
-                <td>Märk</td>
-                <td>
-                  <button class="btn btn-primary btn-sm" ng-hide="ctrl.editingData[hinne.id]" ng-click="ctrl.modify(hinne)">Muuda</button>
-                  <button class="btn btn-primary btn-sm" ng-show="ctrl.editingData[hinne.id]" ng-click="ctrl.update(hinne)">Salvesta</button>
-                </td>
-
-              </tr>
-            </table>
-            <table class="table table-sm">
-              <tr>
-          			<td>&nbsp;</td>
-                <td>Punktid</td>define modal in js
-                <td>3. etapp</td>
-          			<td>4. etapp</td>
-                <td>5. etapp</td>
-          			<td>6. etapp</td>
-                <td>7. etapp</td>
-          			<td>8. etapp</td>
-          		</tr>
-              <tr ng-repeat="hinne in ctrl.persons | filter: hinne.isaspect='false'">
-                <td>{{ hinne.kehtivus}}</td>
-                <td>
-                  {{hinne.kehtivusepunktid}}
-
-                </td>
-                <td>
-                  <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.etapp1}}</div>
-                  <div ng-show="ctrl.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp1"/></div>
-                </td>
-                <td>
-                  <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.etapp2}}</div>
-                  <div ng-show="ctrl.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp2"/></div>
-                </td>
-                <td>
-                  <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.etapp3}}</div>
-                  <div ng-show="ctrl.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp3"/></div>
-                </td>
-                <td>
-                  <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.etapp4}}</div>
-                  <div ng-show="ctrl.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp4"/></div>
-                </td>
-                <td>
-                  <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.etapp5}}</div>
-                  <div ng-show="ctrl.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp5"/></div>
-                </td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>
-                  <button class="btn btn-primary btn-sm" ng-hide="ctrl.editingData[hinne.id]" ng-click="ctrl.modify(hinne)">Muuda</button>
-                  <button class="btn btn-primary btn-sm" ng-show="ctrl.editingData[hinne.id]" ng-click="ctrl.update(hinne)">Salvesta</button>
-                </td>
-              </tr>
-          </table> -->
-
-          <div>
-            <table>
-              <tr>
-          			<td>&nbsp;</td>
-                <td>&nbsp;</td>
-          			<td>Punktid</td>
-          			<td>Tähtaeg</td>
-          		</tr>
-              <tr ng-repeat="aspect in ctrl.gradingAspects">
-                <td>
-                  <div> {{ aspect.number }} </div>
-                </td>
-                <td>
-                  <div id="modallink" ng-click="ctrl.openHelpModal(aspect.url)"> {{ aspect.name }} </div>
-                </td>
-                <td>
-                  <div> {{ aspect.max_points }} </div>
-                </td>
-                <td>
-                  <div> {{ aspect.deadline}} </div>
-                </td>
-
-                <!-- <td>
-                  <div> {{ k.url }} </div>
-                </td> -->
-
-              </tr>
-            </table>
-          </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Palun oodake.</p>
       </div>
-
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div ng-show="{{ !currentUser.is_professor }}">
-    Mis sa siia ronid?
+<div id="scrollmenu" class="push_down" ng-controller="GradingController as ctrl">
+  <!-- <table class="table table-sm scrollmenu">
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>Punktid</td>
+      <td>Tähtaeg</td>
+      <td>Esitamise etapp</td>
+      <td>Punktid</td>
+      <td>Märkused </td>
+    </tr>
+    <tr ng-repeat="hinne in ctrl.persons | filter: hinne.isaspect='true'">
+      <td>{{ hinne.number }}</td>
+      <td>{{ hinne.description }}</td>
+      <td>{{hinne.first_name}}</td>
+      <td>{{hinne.last_name}}</td>
+      <td>
+        <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.datetime}}</div>
+        <div ng-show="ctrl.editingData[hinne.id]"><input size="10" type="text" ng-model="hinne.datetime" /></div>
+      </td>
+      <td>
+        <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.esitamise_etapp}}</div>
+        <div ng-show="ctrl.editingData[hinne.id]"><input size="10" type="text" ng-model="hinne.esitamise_etapp" /></div>
+      </td>
+      <td>Märk</td>
+      <td>
+        <button class="btn btn-primary btn-sm" ng-hide="ctrl.editingData[hinne.id]" ng-click="ctrl.modify(hinne)">Muuda</button>
+        <button class="btn btn-primary btn-sm" ng-show="ctrl.editingData[hinne.id]" ng-click="ctrl.update(hinne)">Salvesta</button>
+      </td>
+
+    </tr>
+  </table>
+  <table class="table table-sm">
+    <tr>
+      <td>&nbsp;</td>
+      <td>Punktid</td>define modal in js
+      <td>3. etapp</td>
+      <td>4. etapp</td>
+      <td>5. etapp</td>
+      <td>6. etapp</td>
+      <td>7. etapp</td>
+      <td>8. etapp</td>
+    </tr>
+    <tr ng-repeat="hinne in ctrl.persons | filter: hinne.isaspect='false'">
+      <td>{{ hinne.kehtivus}}</td>
+      <td>
+        {{hinne.kehtivusepunktid}}
+
+      </td>
+      <td>
+        <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.etapp1}}</div>
+        <div ng-show="ctrl.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp1" /></div>
+      </td>
+      <td>
+        <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.etapp2}}</div>
+        <div ng-show="ctrl.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp2" /></div>
+      </td>
+      <td>
+        <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.etapp3}}</div>
+        <div ng-show="ctrl.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp3" /></div>
+      </td>
+      <td>
+        <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.etapp4}}</div>
+        <div ng-show="ctrl.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp4" /></div>
+      </td>
+      <td>
+        <div ng-hide="ctrl.editingData[hinne.id]">{{hinne.etapp5}}</div>
+        <div ng-show="ctrl.editingData[hinne.id]"><input size="5" type="text" ng-model="hinne.etapp5" /></div>
+      </td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>
+        <button class="btn btn-primary btn-sm" ng-hide="ctrl.editingData[hinne.id]" ng-click="ctrl.modify(hinne)">Muuda</button>
+        <button class="btn btn-primary btn-sm" ng-show="ctrl.editingData[hinne.id]" ng-click="ctrl.update(hinne)">Salvesta</button>
+      </td>
+    </tr>
+  </table> -->
+
+  <div>
+    <table>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Punktid</td>
+        <td>Tähtaeg</td>
+      </tr>
+      <tr ng-repeat="aspect in ctrl.gradingAspects">
+        <td>
+          <div> {{ aspect.number }} </div>
+        </td>
+        <td>
+          <div id="modallink" ng-click="ctrl.openHelpModal(aspect.url)"> {{ aspect.name }} </div>
+        </td>
+        <td>
+          <div> {{ aspect.max_points }} </div>
+        </td>
+        <td>
+          <div> {{ aspect.deadline}} </div>
+        </td>
+
+        <!-- <td>
+             <div> {{ k.url }} </div>
+           </td> -->
+
+      </tr>
+    </table>
   </div>
+</div>
