@@ -1,6 +1,8 @@
 class GradingController {
   constructor(Api, $location) {
 
+    $('#myModal').appendTo("body").modal('hide');
+
     this.Api = Api
     this.$location = $location
 
@@ -20,6 +22,16 @@ class GradingController {
     for (var i = 0, length = this.persons.length; i < length; i++) {
       this.editingData[this.persons[i].id] = false;
     }
+
+    this.gradingAspects = [];
+
+    this.Api.getGradingAspects().then((response) => {
+        this.gradingAspects = response.data;
+        console.log(response);
+        console.log('Grading aspects received');
+    })
+
+
 
   }
 

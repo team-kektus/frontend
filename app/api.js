@@ -34,6 +34,14 @@ class Api {
     return this.Restangular.one('account').put(params)
   }
 
+  getGradingAspects() {
+    return this.Restangular.all('grading_aspects').getList()
+  }
+
+  getTeams() {
+    return this.Restangular.all('teams').getList()
+  }
+
 }
 
 

@@ -1,7 +1,27 @@
+<div id="myModal" class="modal fade" role="dialog">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">Tingimused</h4>
+       </div>
+       <div class="modal-body">
+         <p>1. Hindamissüsteem on mõeldud Tartu Ülikooli õppejõududele ja õpilastele.</p>
+         <p>2. Veebirakenduse kasutamine ükskõik millisel illegaalsel viisil on kriminaalkorras karistatav.</p>
+         <p>3. Team Kektus ei vastuta Teie salvestatud andmete eest.</p>
+         <p>4. Team Kektus jätab endale õiguse igal ajal muuta või täiendada reegleid.</p>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
 <div ng-show="{{ currentUser.is_professor }}">
-<div class="lead push_down">Team Sample</div>
+<!-- <div class="lead push_down">Team Sample</div> -->
       <div id="scrollmenu" ng-controller="GradingController as asd">
-          <table class="table table-sm scrollmenu">
+        <!--  <table class="table table-sm scrollmenu">
               <tr>
           			<td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -35,9 +55,7 @@
             <table class="table table-sm">
               <tr>
           			<td>&nbsp;</td>
-                <td>Punktid</td>
-          			<td>1. etapp</td>
-          			<td>2. etapp</td>
+                <td>Punktid</td>define modal in js
                 <td>3. etapp</td>
           			<td>4. etapp</td>
                 <td>5. etapp</td>
@@ -49,8 +67,7 @@
                 <td>{{ hinne.kehtivus}}</td>
                 <td>
                   {{hinne.kehtivusepunktid}}
-                  <!-- <div ng-hide="asd.editingData[hinne.id]">{{hinne.kehtivusepunktid}}</div>
-                  <div ng-show="asd.editingData[hinne.id]"><input type="text" ng-model="hinne.kehtivusepunktid" /></div> -->
+
                 </td>
                 <td>
                   <div ng-hide="asd.editingData[hinne.id]">{{hinne.etapp1}}</div>
@@ -80,9 +97,39 @@
                   <button class="btn btn-primary btn-sm" ng-show="asd.editingData[hinne.id]" ng-click="asd.update(hinne)">Salvesta</button>
                 </td>
               </tr>
-          </table>
+          </table> -->
 
+          <div>
+            <table>
+              <tr>
+          			<td>&nbsp;</td>
+                <td>&nbsp;</td>
+          			<td>Punktid</td>
+          			<td>Tähtaeg</td>
+          		</tr>
+              <tr ng-repeat="k in asd.gradingAspects">
+                <td>
+                  <div> {{ k.number }} </div>
+                </td>
+                <td>
+                  <div data-toggle="modal" data-target="#myModal"> {{ k.name }} </div>
+                </td>
+                <td>
+                  <div> {{ k.max_points }} </div>
+                </td>
+                <td>
+                  <div> {{ k.deadline}} </div>
+                </td>
+
+                <!-- <td>
+                  <div> {{ k.url }} </div>
+                </td> -->
+
+              </tr>
+            </table>
+          </div>
       </div>
+
   </div>
 
   <div ng-show="{{ !currentUser.is_professor }}">

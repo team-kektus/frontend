@@ -6,6 +6,7 @@ angular.module('kektus', [
   'kektus.account',
   'kektus.main',
   'kektus.grading',
+  'kektus.teamview',
 ])
 
 angular.module('kektus')
