@@ -13,7 +13,7 @@
 
 <div ng-show="{{ currentUser.is_professor }}">
 <!-- <div class="lead push_down">Team Sample</div> -->
-      <div id="scrollmenu" ng-controller="GradingController as ctrl">
+      <div id="scrollmenu" class="push_down" ng-controller="GradingController as ctrl">
         <!--  <table class="table table-sm scrollmenu">
               <tr>
           			<td>&nbsp;</td>
@@ -105,7 +105,7 @@
                   <div> {{ aspect.number }} </div>
                 </td>
                 <td>
-                  <div ng-click="ctrl.openHelpModal(aspect.url)"> {{ aspect.name }} </div>
+                  <div id="modallink" ng-click="ctrl.openHelpModal(aspect.url)"> {{ aspect.name }} </div>
                 </td>
                 <td>
                   <div> {{ aspect.max_points }} </div>
