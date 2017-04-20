@@ -2,7 +2,7 @@ angular.module('kektus')
   .config(function ($stateProvider) {
     $stateProvider
       .state('grading', {
-        parent: 'protected',
+        parent: 'protected-professor',
         url: '/grading/',
         views: {
           '': {
