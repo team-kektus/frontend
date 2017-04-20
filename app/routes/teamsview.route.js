@@ -1,13 +1,13 @@
 angular.module('kektus')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('teamview', {
+      .state('teamsview', {
         parent: 'protected-professor',
-        url: '/teamview/',
+        url: '/teamsview/',
         views: {
           '': {
-            templateUrl: 'teamview/teamview.template.html',
-            controller: 'TeamviewController',
+            templateUrl: 'teamsview/teamsview.template.html',
+            controller: 'TeamsviewController',
             controllerAs: 'ctrl'
           }
         }

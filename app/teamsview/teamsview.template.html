@@ -1,0 +1,19 @@
+<div class="push_down" ng-controller="TeamsviewController as ctrl">
+
+  <div>
+    <table class="table table-striped">
+      <tr ng-repeat="teamname in ctrl.teamsList" data-ui-sref="grading">
+        <td>
+          <div> {{ teamname.name }} </div>
+        </td>
+        <td>
+          <div> {{ teamname.project_name }} </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="contt">
+  </div>
+
+</div>
