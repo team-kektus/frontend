@@ -27,7 +27,7 @@ class GradingController {
       this.modal_body.load(`${url} #wikitext`)
     }
     else {
-       this.modal_body.text("OK LOL XD")
+       this.modal_body.text("Courses lehelt ei leitud andmeid.")
     }
     this.modal.modal('show')
   }
