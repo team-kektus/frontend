@@ -17,3 +17,96 @@
   </div>
 
 </div>
+
+
+<div class="row">
+	<div class="col-md-12">
+		<!-- BEGIN PORTLET-->
+		<div class="portlet box yellow-crusta">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-gift"></i>Create new team
+				</div>
+				<!-- <div class="tools">
+					<a href="javascript:;" class="collapse">
+					</a>
+					<a href="#" data-toggle="modal" class="config">
+					</a>
+					<a href="javascript:;" class="reload">
+					</a>
+					<a href="javascript:;" class="remove">
+					</a>
+				</div> -->
+			</div>
+			<div class="portlet-body form">
+				<form id="form-username" class="form-horizontal form-bordered" ng-submit="ctrl.createNewTeam()">
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Name</label>
+						<div class="col-sm-4">
+							<div class="input-group">
+								<span class="input-group-addon">
+								<i class="fa fa-user"></i>
+								</span>
+								<input ng-model="ctrl.model.name" type="text" class="form-control" required/>
+							</div>
+							<p class="help-block">
+								E.g: Team-Kektus.
+							</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Project name</label>
+						<div class="col-sm-4">
+							<div class="input-group">
+								<span class="input-group-addon">
+								<i class="fa fa-search"></i>
+								</span>
+								<input ng-model="ctrl.model.project_name" type="text" class="form-control" required/>
+							</div>
+							<p class="help-block">
+								E.g: Grading system.
+							</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Repository url</label>
+						<div class="col-sm-4">
+							<div class="input-group">
+								<span class="input-group-addon">
+								<i class="fa fa-github"></i>
+								</span>
+								<input ng-model="ctrl.model.repository_url" type="text" class="form-control"/>
+							</div>
+							<!-- <p class="help-block">
+
+							</p> -->
+						</div>
+					</div>
+					<div class="form-group ">
+						<label class="col-sm-3 control-label">Staging environment url</label>
+						<div class="col-sm-4">
+							<div class="input-group">
+								<span class="input-group-addon">
+								<i class="fa fa-globe"></i>
+								</span>
+								<input ng-model="ctrl.model.staging_url" type="text" class="form-control"/>
+							</div>
+							<!-- <p class="help-block">
+
+							</p> -->
+						</div>
+					</div>
+					<div class="form-actions">
+						<div class="row">
+							<div class="col-md-offset-3 col-md-9">
+								<button type="submit" class="btn purple"><i class="fa fa-check"></i> Submit</button>
+								<button type="button" class="btn default">Cancel</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- END PORTLET-->
+	</div>
+</div>

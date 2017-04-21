@@ -13,6 +13,21 @@ class TeamsviewController {
         console.log('Team names received');
     })
 
+
+    this.model = {}
+
+  }
+
+  createNewTeam() {
+    this.Api.createTeam(this.model).then(() => {
+      window.alert('Team created successfully.')
+      this.teamsList.push(this.model)
+      this.model = {}
+    }).catch(error => {
+      console.log(error)
+      window.alert('Error occured.')
+      this.model = {}
+    })
   }
 
 }

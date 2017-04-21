@@ -43,6 +43,10 @@ class Api {
     return this.Restangular.all('teams').getList()
   }
 
+  createTeam(params) {
+    return this.Restangular.all('teams').post(params)
+  }
+
   changeAccountAvatar(avatar_file) {
     return this.putAvatar("/api/v1/account.json", avatar_file)
   }
