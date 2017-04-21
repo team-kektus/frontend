@@ -67,6 +67,19 @@ class Api {
     return this.Restangular.one('account').one('team').put(params)
   }
 
+  updateUserPermissions(user_id, is_professor, is_admin) {
+    return this.Restangular.one('users', user_id).one('permissions').put({
+      is_professor: is_professor,
+      is_admin: is_admin
+    })
+  }
+
+  addUserToTeam(user_id, team_id) {
+    return this.Restangular.one('users', user_id).put({
+      team_id: team_id
+    })
+  }
+
 }
 
 
