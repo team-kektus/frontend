@@ -1,0 +1,155 @@
+<div id="userModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+        	<div class="col-md-12">
+        		<!-- BEGIN PROFILE SIDEBAR -->
+        		<div class="profile-sidebar">
+        			<!-- PORTLET MAIN -->
+        			<div class="portlet light profile-sidebar-portlet">
+        				<!-- SIDEBAR USERPIC -->
+        				<div class="profile-userpic">
+        					<img ng-src="{{ openedUser.avatar }}" class="img-responsive" alt="">
+        				</div>
+        				<!-- END SIDEBAR USERPIC -->
+        				<!-- SIDEBAR USER TITLE -->
+        				<div class="profile-usertitle">
+        					<div class="profile-usertitle-name">
+        						{{ openedUser.full_name }}
+        					</div>
+        					<div class="profile-usertitle-job">
+        						{{ openedUser.team.name }}
+        					</div>
+        				</div>
+        				<!-- END SIDEBAR USER TITLE -->
+        				<!-- SIDEBAR MENU -->
+        				<div class="profile-usermenu">
+        					<ul class="nav">
+        						<li ng-class="{active: $state.includes('profile.dashboard')}">
+        							<a ui-sref="profile.dashboard">
+        							<i class="icon-home"></i>
+        							Overview </a>
+        						</li>
+        						<li ng-class="{active: $state.includes('profile.account')}">
+        							<a ui-sref="profile.account">
+        							<i class="icon-settings"></i>
+        							Account Settings </a>
+        						</li>
+        						<li>
+        							<a href="#/todo">
+        							<i class="icon-check"></i>
+        							Tasks </a>
+        						</li>
+        						<li ng-class="{active: $state.includes('profile.help')}">
+        							<a ui-sref="profile.help">
+        							<i class="icon-info"></i>
+        							Help </a>
+        						</li>
+        					</ul>
+        				</div>
+        				<!-- END MENU -->
+        			</div>
+        			<!-- END PORTLET MAIN -->
+        		</div>
+        		<!-- END BEGIN PROFILE SIDEBAR -->
+        		<!-- BEGIN PROFILE CONTENT -->
+        		<div class="profile-content fade-in-up">
+        		</div>
+        		<!-- END PROFILE CONTENT -->
+        	</div>
+        </div>
+        <!-- END PAGE CONTENT-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- BEGIN PORTLET -->
+<div class="portlet light">
+  <div class="portlet-title">
+    <div class="caption caption-md">
+      <i class="icon-bar-chart theme-font hide"></i>
+      <span class="caption-subject font-blue-madison bold uppercase">All users</span>
+      <span class="caption-helper hide">weekly stats...</span>
+    </div>
+    <!-- <div class="actions">
+      <div class="btn-group btn-group-devided" data-toggle="buttons">
+        <label class="btn btn-transparent grey-salsa btn-circle btn-sm active">
+        <input type="radio" name="options" class="toggle" id="option1">Today</label>
+        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+        <input type="radio" name="options" class="toggle" id="option2">Week</label>
+        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+        <input type="radio" name="options" class="toggle" id="option2">Month</label>
+      </div>
+    </div> -->
+    <div class="actions">
+      <div class="form-group">
+        <label class="control-label">Search</label>
+        <div>
+          <div class="input-group">
+            <span class="input-group-addon">
+  					  <i class="fa fa-search"></i>
+  					</span>
+            <input type="text" class="form-control" ng-model="queryString" autofocus/>
+          </div>
+          <p class="help-block">
+            E.g: John Doe</code>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="portlet-body">
+    <div class="table-scrollable table-scrollable-borderless">
+      <table class="table table-hover table-light">
+        <thead>
+          <tr class="uppercase">
+            <th colspan="2">
+              User
+            </th>
+            <th>
+              Professor
+            </th>
+            <th>
+              Admin
+            </th>
+            <th>
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tr ng-repeat="user in ctrl.users | filter:queryString">
+          <td class="fit">
+            <img class="user-pic" ng-src="{{ user.avatar }}">
+          </td>
+          <td>
+            <a href="#" class="primary-link" ng-click="ctrl.showUserDetails(user)">{{ user.full_name }}</a>
+          </td>
+          <td>
+            {{ user.is_professor }}
+          </td>
+          <td>
+            {{ user.is_admin }}
+          </td>
+          <!-- <td>
+            124
+          </td> -->
+          <!-- <td>
+            <span class="bold theme-font">80%</span>
+          </td> -->
+        </tr>
+
+      </table>
+    </div>
+  </div>
+</div>
+<!-- END PORTLET -->

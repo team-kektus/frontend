@@ -1,0 +1,59 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+	<li>
+		<a href="#">Home</a><i class="fa fa-circle"></i>
+	</li>
+	<li class="active">
+		Admin page
+	</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+
+
+<!-- BEGIN PAGE CONTENT-->
+<div class="row" ng-controller="MyTeamController as ctrl">
+	<div class="col-md-12">
+		<!-- BEGIN PROFILE SIDEBAR -->
+		<div class="profile-sidebar">
+			<!-- PORTLET MAIN -->
+			<div class="portlet light profile-sidebar-portlet" style="padding: 0px 0 0 0 !important">
+
+        <h4 class="profile-usertitle-job" style="padding: 30px 15px 10px 20px;">About {{ currentTeam.name }}</h4>
+				<!-- SIDEBAR USER TITLE -->
+				<!-- <div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						{{ currentTeam.name }}
+					</div>
+					<div class="profile-usertitle-job">
+						Admin related tasks
+					</div>
+				</div> -->
+				<!-- END SIDEBAR USER TITLE -->
+
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li ng-class="{active: $state.includes('admin.dashboard')}">
+							<a ui-sref="admin.dashboard">
+							<i class="icon-home"></i>
+							Overview </a>
+						</li>
+						<li ng-class="{active: $state.includes('admin.users')}">
+							<a ui-sref="admin.users">
+							<i class="icon-user"></i>
+							Users </a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
+			<!-- END PORTLET MAIN -->
+		</div>
+		<!-- END BEGIN PROFILE SIDEBAR -->
+		<!-- BEGIN PROFILE CONTENT -->
+		<div ui-view class="profile-content fade-in-up">
+		</div>
+		<!-- END PROFILE CONTENT -->
+	</div>
+</div>
+<!-- END PAGE CONTENT-->

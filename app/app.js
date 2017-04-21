@@ -8,6 +8,7 @@ angular.module('kektus', [
   'kektus.grading',
   'kektus.teamsview',
   'kektus.myteam',
+  'kektus.admin',
 ])
 
 angular.module('kektus')

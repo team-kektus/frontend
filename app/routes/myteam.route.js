@@ -24,8 +24,7 @@ angular.module('kektus')
       })
 
       .state('team.dashboard', {
-        parent: 'team',
-        url: '',
+        url: '/',
         views: {
           '': {
             templateUrl: 'myteam/children/dashboard.template.html',
@@ -34,8 +33,7 @@ angular.module('kektus')
       })
 
       .state('team.settings', {
-        parent: 'team',
-        url: '/settings',
+        url: '/settings/',
         views: {
           '': {
             templateUrl: 'myteam/children/settings.template.html',
