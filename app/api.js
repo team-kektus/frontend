@@ -1,6 +1,7 @@
 class Api {
-  constructor(Restangular) {
+  constructor(Restangular, $http) {
     this.Restangular = Restangular
+    this.$http = $http
   }
 
   getUsers() {
@@ -30,7 +31,7 @@ class Api {
     return this.Restangular.one('account').get()
   }
 
-  saveChanges(params) {
+  updateAccount(params) {
     return this.Restangular.one('account').put(params)
   }
 
@@ -42,11 +43,36 @@ class Api {
     return this.Restangular.all('teams').getList()
   }
 
+  changeAccountAvatar(avatar_file) {
+    return this.putAvatar("/api/v1/account.json", avatar_file)
+  }
+
+  changeMyTeamAvatar(avatar_file) {
+    return this.putAvatar("/api/v1/account/team.json", avatar_file)
+  }
+
+
+  putAvatar(url, avatar_file) {
+    let formData = new FormData();
+    formData.append('avatar', avatar_file)
+
+    // Bug, restangular with Content-Type undefined returns 400
+    return this.$http.put(url, formData, {
+      transformRequest: angular.identity,
+      headers: {'Content-Type': undefined}
+    })
+  }
+
+  updateTeam(params) {
+    return this.Restangular.one('account').one('team').put(params)
+  }
+
 }
 
 
 angular.module('kektus')
   .service('Api', [
     'Restangular',
+    '$http',
     Api
   ])

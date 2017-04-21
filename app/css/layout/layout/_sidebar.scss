@@ -273,6 +273,8 @@ Page sidebar
 
 				> li {
 					&.heading {
+						display: none;
+						
 						> h3 {
 							display: none;
 						}

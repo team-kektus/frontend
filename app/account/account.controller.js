@@ -10,25 +10,29 @@ class AccountController {
   }
 
   saveChanges() {
-    this.model.avatar = this.model.raw_avatar.file
-    delete this.model.raw_avatar
-
-    let formData = new FormData();
-
-    for ( let key in this.model ) {
-        formData.append(key, this.model[key]);
-    }
-
-    // Bug, restangular with Content-Type undefined returns 400
-    this.$http.put("/api/v1/account.json", formData, {
-      transformRequest: angular.identity,
-      headers: {'Content-Type': undefined}
-    }).then(() => {
+    this.Api.updateAccount(this.model)
+      .then(() => {
         window.alert("Ok")
         this.$state.reload()
-    }).catch(() => {
+      })
+      .catch((response) => {
+        console.log(response);
         window.alert('Error')
-    })
+      })
+    this.resetModel()
+  }
+
+  changeAvatar() {
+    this.Api.changeAccountAvatar(this.model.avatar.file)
+      .then(() => {
+        window.alert("Ok")
+        this.$state.reload()
+      })
+      .catch((response) => {
+        console.log(response);
+        window.alert('Error')
+      })
+    this.resetModel()
   }
 
   resetModel() {

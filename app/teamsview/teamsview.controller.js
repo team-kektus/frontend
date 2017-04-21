@@ -1,9 +1,9 @@
 class TeamsviewController {
-  constructor(Api, $location) {
+  constructor(Api, $state) {
     console.log('Initializing TeamsviewController');
 
     this.Api = Api
-    this.$state = $location
+    this.$state = $state
 
     this.teamsList = [];
 
@@ -21,6 +21,6 @@ class TeamsviewController {
 angular.module('kektus.teamsview')
   .controller('TeamsviewController', [
     'Api',
-    '$location',
+    '$state',
     TeamsviewController
 ])

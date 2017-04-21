@@ -3,7 +3,7 @@ angular.module('kektus')
     $stateProvider
       .state('teamsview', {
         parent: 'protected-professor',
-        url: '/teamsview/',
+        url: '/teams/',
         views: {
           '': {
             templateUrl: 'teamsview/teamsview.template.html',

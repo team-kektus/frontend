@@ -7,6 +7,7 @@ angular.module('kektus', [
   'kektus.main',
   'kektus.grading',
   'kektus.teamsview',
+  'kektus.myteam',
 ])
 
 angular.module('kektus')
@@ -26,7 +27,7 @@ angular.module('kektus')
 
   .run(function ($rootScope, $window) {
     $rootScope.Layout = {
-      'sidebar_is_closed': false
+      'sidebar_is_closed': true
     }
 
     // Uses Cors-Anywhere to make cors requests to servers where CORS Access-Control-Allow-Origin is not present.

@@ -24,6 +24,7 @@ angular.module('kektus')
           currentUser: function ($rootScope, $state, Api) {
             return Api.getAccount().then(result => {
               $rootScope.currentUser = result.data
+              $rootScope.currentTeam = $rootScope.currentUser.team
               return result.data
             }).catch(() => {
               $state.go('root')
