@@ -5,6 +5,7 @@ class UsersAdminController {
 
 
     this.users = []
+    this.teams = []
     this.queryString = ""
     this.model = {}
 
@@ -16,12 +17,19 @@ class UsersAdminController {
 
   fetchData() {
     this.fetchUsers()
+    this.fetchTeams()
   }
 
   fetchUsers() {
     this.Api.getUsers().then(response => {
       console.log(response);
       this.users = response.data
+    })
+  }
+
+  fetchTeams() {
+    this.Api.getTeams().then(response => {
+      this.teams = response.data
     })
   }
 
@@ -44,7 +52,7 @@ class UsersAdminController {
   }
 
   addToTeam(user_id) {
-    this.Api.addUserToTeam(user_id, this.model.team_id).then(() => {
+    this.Api.addUserToTeam(user_id, this.model.team.id).then(() => {
       window.alert('User successfully signed to a team.')
     }).catch(error => {
       console.log(error)
