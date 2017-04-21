@@ -5,15 +5,18 @@ angular.module('kektus')
         resolve: {
           redirect: function ($rootScope, $location) {
             $location.search()
+            old_path = $location.$$path
 
-            if ('currentPerson' in $rootScope)
-              path = '/account/'
+            if ('currentUser' in $rootScope)
+              path = '/'
             else
               path = '/login/'
 
-            $location.path(path)
-            // window.location.reload()
-
+            if (path != old_path) {
+              $location.path(path)
+            } else {
+              window.location.reload()
+            }
           }
         }
       })
