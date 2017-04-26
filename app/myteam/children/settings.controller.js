@@ -50,7 +50,7 @@ class MyTeamSettingsController {
       errors.push('Repository url is invalid. Use full url with http/https prefix.')
     if (model.staging_url && !this.validateURL(model.staging_url))
       errors.push('Staging url is invalid. Use full url with http/https prefix.')
-    if (model.description.length < 5 || model.description.length > 50)
+    if (model.description && model.description.length < 5 || model.description.length > 50)
       errors.push('Description has to have at least 5 letters and maximum of 50 letters.')
 
     return errors
