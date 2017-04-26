@@ -2,6 +2,7 @@ angular.module('kektus', [
   'ui.router',
   'ui.select',
   'restangular',
+  'pascalprecht.translate',
   'kektus.components',
   'kektus.login',
   'kektus.account',
@@ -40,5 +41,52 @@ angular.module('kektus')
         //options.url = "http://cors.corsproxy.io/url=" + options.url;
       }
     })
+
+  })
+
+  .config(function ($translateProvider) {
+    $translateProvider.useSanitizeValueStrategy(null);
+
+    $translateProvider.translations('ee', {
+      ACCINFO: 'Isiklik info',
+      ACCAVATAR: 'Vaheta profiili pilti',
+      ACCPW: 'Vaheta parooli',
+      ACCPRIV: 'Privaatsus sätted',
+      ACCNAME: 'Ees- ja perekonnanimi',
+      ACCAADRESS: 'Aadress',
+      ACCCITY: 'Linn/Asula',
+      ACCPROF: 'Eriala',
+      ACCSAVE: 'Salvesta muudatused',
+      ACCRESET: 'Lähtesta',
+
+
+
+
+
+
+      en: 'English',
+      ee: 'Eesti'
+    })
+    .translations('en', {
+      ACCINFO: 'Personal info',
+      ACCAVATAR: 'Change Avatar',
+      ACCPW: 'Change Password',
+      ACCPRIV: 'Privacy Settings',
+      ACCNAME: 'First and lastname',
+      ACCAADRESS: 'Address',
+      ACCCITY: 'City/Village',
+      ACCPROF: 'Profession',
+      ACCSAVE: 'Save changes',
+      ACCRESET: 'Reset',
+
+
+
+
+
+      en: 'English',
+      ee: 'Eesti'
+    });
+    $translateProvider.preferredLanguage(localStorage.getItem('languagePreference') || 'ee');
+    //$translateProvider.preferredLanguage('ee');
 
   })

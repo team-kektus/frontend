@@ -25,6 +25,7 @@
     "restangular": "^1.6.1",
     "simple-line-icons": "^2.4.1",
     "font-awesome": "^4.7.0",
-    "angular-ui-select": "^0.19.8"
+    "angular-ui-select": "^0.19.8",
+    "angular-translate": "^2.15.1"
   }
 }
