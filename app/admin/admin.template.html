@@ -1,14 +1,13 @@
 <!-- BEGIN PAGE BREADCRUMB -->
 <ul class="page-breadcrumb breadcrumb">
 	<li>
-		<a href="#">Home</a><i class="fa fa-circle"></i>
+		<a href="#">{{ 'ACCHOME' | translate  }}</a><i class="fa fa-circle"></i>
 	</li>
 	<li class="active">
-		Admin page
+		{{ 'ADPAGE' | translate  }}
 	</li>
 </ul>
 <!-- END PAGE BREADCRUMB -->
-
 
 <!-- BEGIN PAGE CONTENT-->
 <div class="row" ng-controller="MyTeamController as ctrl">
@@ -18,7 +17,7 @@
 			<!-- PORTLET MAIN -->
 			<div class="portlet light profile-sidebar-portlet" style="padding: 0px 0 0 0 !important">
 
-        <h4 class="profile-usertitle-job" style="padding: 30px 15px 10px 20px;">Admin tasks</h4>
+        <h4 class="profile-usertitle-job" style="padding: 30px 15px 10px 20px;">		{{ 'ADTASK' | translate  }}</h4>
 				<!-- SIDEBAR USER TITLE -->
 				<!-- <div class="profile-usertitle">
 					<div class="profile-usertitle-name">
@@ -36,12 +35,12 @@
 						<li ng-class="{active: $state.includes('admin.dashboard')}">
 							<a ui-sref="admin.dashboard">
 							<i class="icon-home"></i>
-							Overview </a>
+							{{ 'ADOVER' | translate  }} </a>
 						</li>
 						<li ng-class="{active: $state.includes('admin.users')}">
 							<a ui-sref="admin.users">
 							<i class="icon-user"></i>
-							Users </a>
+							{{ 'ADUSER' | translate  }} </a>
 						</li>
 					</ul>
 				</div>

@@ -29,23 +29,23 @@
             <li>
               <a ui-sref="main">
                 <i class="icon-home"></i>
-                <span class="title">Dashboard</span>
+                <span class="title">{{ 'HEDASH' | translate  }}</span>
               </a>
             </li>
             <li>
               <a ui-sref="account">
-                <i class="icon-user"></i> My Profile </a>
+                <i class="icon-user"></i> {{ 'HEPROF' | translate  }} </a>
             </li>
             <li>
               <a href="#/todo">
-                <i class="icon-rocket"></i> My Tasks
+                <i class="icon-rocket"></i> {{ 'HETASK' | translate  }}
               </a>
             </li>
             <li class="divider">
             </li>
             <li>
               <a ng-click="mainctrl.logout()">
-                <i class="icon-key"></i> Log Out </a>
+                <i class="icon-key"></i> {{ 'HELOG' | translate  }} </a>
             </li>
           </ul>
 </li>

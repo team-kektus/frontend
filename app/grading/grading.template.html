@@ -2,10 +2,10 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body">
-        <p>Palun oodake.</p>
+        <p>{{ 'GRWAIT' | translate  }}</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">{{ 'GRCLOSE' | translate  }}</button>
       </div>
     </div>
   </div>
@@ -95,8 +95,8 @@
       <tr>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td>Punktid</td>
-        <td>Tähtaeg</td>
+        <td>{{ 'GRPOINTS' | translate  }}</td>
+        <td>{{ 'GRDATE' | translate  }}</td>
       </tr>
       <tr ng-repeat="aspect in ctrl.gradingAspects">
         <td>

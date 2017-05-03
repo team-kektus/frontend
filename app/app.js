@@ -58,6 +58,55 @@ angular.module('kektus')
       ACCPROF: 'Eriala',
       ACCSAVE: 'Salvesta muudatused',
       ACCRESET: 'Lähtesta',
+      ACCIMG: 'Vali pilt',
+      ACCNOTE: 'Tähelepanu!',
+      ACCTEXT: 'Pildi lisamine on toetatud ainult kõige uuemates Firfoxi, Chromei, Safari ja Internet Exploreri veebilehitsejates',
+      ACCSUB: 'Esita',
+      ACCCANCEL: 'Tühista',
+      ACCPWNOW: 'Praegune salasõna',
+      ACCPWNEW: 'Uus salasõna',
+      ACCPWRENEW: 'Korda uut salasõna',
+      ACCPWENTER: 'Vaheta salasõna',
+      ACCYES: 'Jah',
+      ACCNO: 'Ei',
+      ACCPROFILE: 'Kasutaja profiil',
+      ACCIMGREMOVE: 'Eemalda',
+      ACCHOME: 'Kodu',
+
+      ADPAGE: 'Admini leht',
+      ADTASK: 'Admini valikud',
+      ADOVER: 'Ülevaade',
+      ADUSER: 'Kasutajad',
+
+      GRWAIT: 'Palun oodake',
+      GRCLOSE: 'Sulge',
+      GRPOINTS: 'Puntkid',
+      GRDATE: 'Tähtaeg',
+
+      HEDASH: 'Armatuurlaud',
+      HEPROF: 'Minu profiil',
+      HETASK: 'Minu ülesanded',
+      HELOG: 'Logi välja',
+
+      SIGEN: 'Üldine',
+      SIUSER: 'Kasutaja profiile',
+      SITEAM: 'Minu Tiim',
+      SITASK: 'Tööd ja tegemised',
+      SITEAM: 'Tiimid',
+      SIADMIN: 'Admin',
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -68,6 +117,7 @@ angular.module('kektus')
       ee: 'Eesti'
     })
     .translations('en', {
+//ADMIN
       ACCINFO: 'Personal info',
       ACCAVATAR: 'Change Avatar',
       ACCPW: 'Change Password',
@@ -78,6 +128,63 @@ angular.module('kektus')
       ACCPROF: 'Profession',
       ACCSAVE: 'Save changes',
       ACCRESET: 'Reset',
+      ACCIMG: 'Select image',
+      ACCNOTE: 'NOTE!',
+      ACCTEXT: 'Attached image thumbnail is supported in Latest Firefox, Chrome, Opera, Safari and Internet Explorer 10 only',
+      ACCSUB: 'Submit',
+      ACCCANCEL: 'Cancel',
+      ACCPWNOW: 'Current Password',
+      ACCPWNEW: 'New Password',
+      ACCPWRENEW: 'Re-type New Password',
+      ACCPWENTER: 'Change Password',
+      ACCYES: 'Yes',
+      ACCNO: 'No',
+      ACCPROFILE: 'Profile Account',
+      ACCIMGREMOVE: 'Remove',
+      ACCHOME: 'Home',
+//ADMIN
+      ADPAGE: 'Admin page',
+      ADTASK: 'Admin tasks',
+      ADOVER: 'Overview',
+      ADUSER: 'Users',
+//GRADING
+      GRWAIT: 'Please wait',
+      GRCLOSE: 'Close',
+      GRPOINTS: 'Points',
+      GRDATE: 'Date',
+
+//HEADER
+      HEDASH: 'Dashboard',
+      HEPROF: 'My Profile',
+      HETASK: 'My Tasks',
+      HELOG: 'Log Out',
+//SIDE
+      SIGEN: 'GENERAL',
+      SIUSER: 'User profile',
+      SITEAM: 'My Team',
+      SITASK: 'Tasks and todo',
+      SITEAM: 'Teams',
+      SIADMIN: 'Admin',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

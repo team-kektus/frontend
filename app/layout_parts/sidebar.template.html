@@ -8,12 +8,12 @@
   <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
   <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" ng-class="{'page-sidebar-menu-closed': Layout.sidebar_is_closed}">
     <li class="heading">
-      <h3>GENERAL</h3>
+      <h3>{{ 'SIGEN' | translate  }}</h3>
     </li>
     <li class="start">
       <a ui-sref="main">
         <i class="icon-home"></i>
-        <span class="title">Dashboard</span>
+        <span class="title">{{ 'HEDASH' | translate  }}</span>
       </a>
     </li>
     <!-- <li>
@@ -90,31 +90,31 @@
     <li>
       <a ui-sref="account" id="sidebar_menu_link_profile">
         <i class="icon-user"></i>
-        <span class="title">User Profile</span>
+        <span class="title">{{ 'SIUSER' | translate  }}</span>
       </a>
     </li>
     <li>
       <a ui-sref="team.dashboard">
         <i class="icon-people"></i>
-        <span class="title">My Team</span>
+        <span class="title">{{ 'SITEAM' | translate  }}</span>
       </a>
     </li>
     <li>
       <a href="#">
         <i class="icon-check"></i>
-        <span class="title">Task &amp; Todo</span>
+        <span class="title">{{ 'SITASK' | translate  }}</span>
       </a>
     </li>
     <li protected-professor>
       <a ui-sref="teamsview.teams">
         <i class="icon-eyeglass"></i>
-        <span class="title">Tiimid</span>
+        <span class="title">{{ 'SITEAM' | translate  }}</span>
       </a>
     </li>
     <li protected-admin>
       <a ui-sref="admin.dashboard">
         <i class="icon-mustache"></i>
-        <span class="title">Admin</span>
+        <span class="title">{{ 'SIADMIN' | translate  }}</span>
       </a>
     </li>
     <!-- <li protected-professor>
