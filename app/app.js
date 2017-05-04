@@ -95,6 +95,29 @@ angular.module('kektus')
       SITEAM: 'Tiimid',
       SIADMIN: 'Admin',
 
+      LOGSIGN: 'Logi sisse',
+      LOGCCRED: 'Sisestage e-mail ja parool',
+      LOGEMAIL: 'E-mail',
+      LOGPW: 'Parool',
+      LOGLOG: 'Logi sisse',
+      LOGREM: 'Mäleta mind',
+      LOGFORGOT: 'Unustasid parooli?',
+      LOGALT: 'Või logi sisse...',
+      LOGCREATE: 'Loo kasutaja',
+      LOGDETAILS: 'Enter your e-mail address below to reset your password.',
+      LOGBACK: 'Tagasi',
+      LOGSUB: 'Esita',
+      LOGSIGNUP: 'Loo konto',
+      LOGINFO: 'Sisestage oma isiklikud andmed:',
+      LOGNAME: 'Täisnimi',
+      LOGADDRESS: 'Aadress',
+      LOGTOWN: 'Linn',
+      LOGDETAILS2: 'Sisestage oma kasutaja andmed:',
+      LOGAGREE: 'Nõustun ',
+      LOGTERMS: 'kasutajatingimuste',
+      LOGPOLICY: 'privaatsus tingimustega.',
+
+
 
 
 
@@ -165,6 +188,48 @@ angular.module('kektus')
       SITASK: 'Tasks and todo',
       SITEAM: 'Teams',
       SIADMIN: 'Admin',
+//LOGIN
+      LOGSIGN: 'Sign In',
+      LOGCCRED: 'Enter any email and password.',
+      LOGEMAIL: 'Email',
+      LOGPW: 'Password',
+      LOGLOG: 'Login',
+      LOGREM: 'Remember',
+      LOGFORGOT: 'Forgot Password?',
+      LOGALT: 'Or login with',
+      LOGCREATE: 'Create an account',
+      LOGDETAILS: 'Enter your e-mail address below to reset your password.',
+      LOGBACK: 'Back',
+      LOGSUB: 'Submit',
+      LOGSIGNUP: 'Sign Up',
+      LOGINFO: 'Enter your personal details below:',
+      LOGNAME: 'Full name',
+      LOGADDRESS: 'Address',
+      LOGTOWN: 'City/Town',
+      LOGDETAILS2: 'Enter your account details below:',
+      LOGAGREE: 'I agree to the',
+      LOGTERMS: 'Terms of Service',
+      LOGPOLICY: 'Privacy Policy',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
