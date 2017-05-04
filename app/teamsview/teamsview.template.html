@@ -1,10 +1,10 @@
 <!-- BEGIN PAGE BREADCRUMB -->
 <ul class="page-breadcrumb breadcrumb">
 	<li>
-		<a href="#">Home</a><i class="fa fa-circle"></i>
+		<a href="#">{{ 'ACCHOME' | translate  }}</a><i class="fa fa-circle"></i>
 	</li>
 	<li class="active">
-		Professor page
+		{{ 'MYPAGE' | translate  }}
 	</li>
 </ul>
 <!-- END PAGE BREADCRUMB -->
@@ -18,7 +18,7 @@
 			<!-- PORTLET MAIN -->
 			<div class="portlet light profile-sidebar-portlet" style="padding: 0px 0 0 0 !important">
 
-        <h4 class="profile-usertitle-job" style="padding: 30px 15px 10px 20px;">Professor tasks</h4>
+        <h4 class="profile-usertitle-job" style="padding: 30px 15px 10px 20px;">{{ 'MYOP' | translate  }}</h4>
 				<!-- SIDEBAR USER TITLE -->
 				<!-- <div class="profile-usertitle">
 					<div class="profile-usertitle-name">
@@ -36,12 +36,12 @@
 						<li ng-class="{active: $state.includes('teamsview.teams')}">
 							<a ui-sref="teamsview.teams">
 							<i class="icon-home"></i>
-							Teams </a>
+							{{ 'SITEAM' | translate  }} </a>
 						</li>
 						<li ng-class="{active: $state.includes('teamsview.createteam')}">
 							<a ui-sref="teamsview.createteam">
 							<i class="icon-people"></i>
-							Create Team </a>
+							{{ 'MYCREATE' | translate  }} </a>
 						</li>
 						<!-- <li ng-class="{active: $state.includes('teamsview.users')}">
 							<a ui-sref="teamsview.users">

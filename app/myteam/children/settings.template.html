@@ -4,14 +4,14 @@
 			<div class="portlet-title tabbable-line">
 				<div class="caption caption-md">
 					<i class="icon-globe theme-font hide"></i>
-					<span class="caption-subject font-blue-madison bold uppercase">Profile Account</span>
+					<span class="caption-subject font-blue-madison bold uppercase">{{ 'ACCPROFILE' | translate  }}</span>
 				</div>
 				<ul class="nav nav-tabs">
 					<li class="active">
-						<a href="#" data-target="#tab_1_1" data-toggle="tab">Personal Info</a>
+						<a href="#" data-target="#tab_1_1" data-toggle="tab"> {{ 'ACCINFO' | translate  }}</a>
 					</li>
 					<li>
-						<a href="#" data-target="#tab_1_2" data-toggle="tab">Change Avatar</a>
+						<a href="#" data-target="#tab_1_2" data-toggle="tab">{{ 'ACCAVATAR' | translate  }}</a>
 					</li>
 				</ul>
 			</div>
@@ -21,30 +21,30 @@
 					<div class="tab-pane active" id="tab_1_1">
 						<form role="form" action="#">
 							<div class="form-group">
-								<label class="control-label">Team's name</label>
+								<label class="control-label">{{ 'TEAMNAME' | translate  }}</label>
 								<input type="text" placeholder="{{ currentTeam.name }}" class="form-control" disabled/>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Project name</label>
+								<label class="control-label">{{ 'TEAMPROJECT' | translate  }}</label>
 								<input type="text" placeholder="{{ currentTeam.project_name }}" class="form-control" disabled/>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Repository URL</label>
+								<label class="control-label">{{ 'TEAMURL' | translate  }}</label>
 								<input ng-model="ctrl.model.repository_url" type="text" placeholder="{{ currentTeam.repository_url }}" class="form-control"/>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Staging environment URL</label>
+								<label class="control-label">{{ 'TEAMENV' | translate  }}</label>
 								<input ng-model="ctrl.model.staging_url" type="text" placeholder="{{ currentTeam.staging_url }}" class="form-control"/>
 							</div>
 							<div class="form-group">
-								<label class="control-label">About</label>
+								<label class="control-label">{{ 'TEAMABOUT' | translate  }}</label>
 								<textarea ng-model="ctrl.model.description" class="form-control" rows="3" placeholder="{{ currentTeam.description }}"></textarea>
 							</div>
 							<div class="margiv-top-10">
 								<a href="#" class="btn green-haze" ng-click="ctrl.saveChanges()">
-								Save Changes </a>
+								{{ 'ACCSAVE' | translate  }} </a>
 								<a href="#" class="btn default" ng-click="ctrl.resetModel()">
-								Cancel </a>
+								{{ 'ACCCANCEL' | translate  }} </a>
 							</div>
 						</form>
 					</div>
@@ -65,25 +65,25 @@
 									<div>
 										<span class="btn default btn-file">
 										<span class="fileinput-new">
-										Select image </span>
+										{{ 'ACCIMG' | translate  }} </span>
 										<span class="fileinput-exists">
-										Change </span>
+										{{ 'ACCCHANGE' | translate  }} </span>
 										<input type="file" accept="image/*" fileread="ctrl.model.avatar" />
 										</span>
 										<a href="#" class="btn default fileinput-exists" data-dismiss="fileinput" ng-click="ctrl.resetModel()">
-										Remove </a>
+										{{ 'ACCIMGREMOVE' | translate  }} </a>
 									</div>
 								</div>
 								<div class="clearfix margin-top-10">
 									<span class="label label-danger">NOTE!</span>
-									<span> Attached image thumbnail is supported in Latest Firefox, Chrome, Opera, Safari and Internet Explorer 10 only </span>
+									<span> {{ 'ACCTEXT' | translate  }} </span>
 								</div>
 							</div>
 							<div class="margin-top-10">
 								<a href="#" class="btn green-haze" ng-click="ctrl.changeAvatar()">
-								Submit </a>
+								{{ 'ACCSUB' | translate  }} </a>
 								<a href="#" class="btn default" ng-click="ctrl.resetModel()">
-								Cancel </a>
+								{{ 'ACCCANCEL' | translate  }} </a>
 							</div>
 						</form>
 					</div>

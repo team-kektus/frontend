@@ -72,6 +72,8 @@ angular.module('kektus')
       ACCPROFILE: 'Kasutaja profiil',
       ACCIMGREMOVE: 'Eemalda',
       ACCHOME: 'Kodu',
+      ACCCHANGE: 'Muuda',
+
 
       ADPAGE: 'Admini leht',
       ADTASK: 'Admini valikud',
@@ -116,6 +118,32 @@ angular.module('kektus')
       LOGAGREE: 'Nõustun ',
       LOGTERMS: 'kasutajatingimuste',
       LOGPOLICY: 'privaatsus tingimustega.',
+
+      MAINWELCOME: 'Tere tulemast hindamissüsteemi',
+
+      TEAMSET: 'Tiimi sätted',
+      TEAMNAME: 'Tiimi nimi',
+      TEAMPROJECT: 'Projekti nimi',
+      TEAMURL: 'Koodihoidla URL',
+      TEAMENV: 'Testkeskkond',
+      TEAMABOUT: 'Lisa',
+
+      MYPAGE: 'Professori leht',
+      MYOP: 'Professori valikud',
+      MYCREATE: 'Loo uus tiim',
+
+      CREATEEG: 'Näiteks: Team-Kektus.',
+      CREATEEG2: 'Näiteks: Grading system.',
+      CREATENAME: 'Nimi.',
+
+
+
+
+
+
+
+
+
 
 
 
@@ -165,6 +193,7 @@ angular.module('kektus')
       ACCPROFILE: 'Profile Account',
       ACCIMGREMOVE: 'Remove',
       ACCHOME: 'Home',
+      ACCCHANGE: 'Change',
 //ADMIN
       ADPAGE: 'Admin page',
       ADTASK: 'Admin tasks',
@@ -210,6 +239,45 @@ angular.module('kektus')
       LOGAGREE: 'I agree to the',
       LOGTERMS: 'Terms of Service',
       LOGPOLICY: 'Privacy Policy',
+
+      MAINWELCOME: 'Welcome to the grading sytem',
+
+      TEAMSET: 'Team settings',
+      TEAMNAME: 'Team name',
+      TEAMPROJECT: 'Project name',
+      TEAMURL: 'Repository URL',
+      TEAMENV: 'Staging environment URL',
+      TEAMABOUT: 'About',
+
+
+      MYPAGE: 'Professor page',
+      MYOP: 'Professor tasks',
+      MYCREATE: 'Create new team',
+
+      CREATEEG: 'E.g: Team-Kektus.',
+      CREATEEG2: 'E.g: Grading system.',
+      CREATENAME: 'Name.',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

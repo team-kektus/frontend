@@ -1,10 +1,10 @@
 <!-- BEGIN PAGE BREADCRUMB -->
 <ul class="page-breadcrumb breadcrumb">
 	<li>
-		<a href="#">Home</a><i class="fa fa-circle"></i>
+		<a href="#">{{ 'ACCHOME' | translate  }}</a><i class="fa fa-circle"></i>
 	</li>
 	<li class="active">
-		My Team
+		{{ 'SITEAM' | translate  }}
 	</li>
 </ul>
 <!-- END PAGE BREADCRUMB -->
@@ -39,12 +39,12 @@
 						<li ng-class="{active: $state.includes('team.dashboard')}">
 							<a ui-sref="team.dashboard">
 							<i class="icon-home"></i>
-							Overview </a>
+							{{ 'ADOVER' | translate  }} </a>
 						</li>
 						<li ng-class="{active: $state.includes('team.settings')}">
 							<a ui-sref="team.settings">
 							<i class="icon-settings"></i>
-							Team Settings </a>
+							{{ 'TEAMSET' | translate  }} </a>
 						</li>
 					</ul>
 				</div>

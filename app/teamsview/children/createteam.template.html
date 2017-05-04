@@ -4,7 +4,7 @@
 		<div class="portlet box yellow-crusta">
 			<div class="portlet-title">
 				<div class="caption">
-					<i class="fa fa-gift"></i>Create new team
+					<i class="fa fa-gift"></i>{{ 'MYCREATE' | translate  }}
 				</div>
 				<!-- <div class="tools">
 					<a href="javascript:;" class="collapse">
@@ -20,7 +20,7 @@
 			<div class="portlet-body form">
 				<form id="form-username" class="form-horizontal form-bordered" ng-submit="ctrl.createNewTeam()">
 					<div class="form-group">
-						<label class="col-sm-3 control-label">Name</label>
+						<label class="col-sm-3 control-label">{{ 'CREATENAME' | translate  }}</label>
 						<div class="col-sm-4">
 							<div class="input-group">
 								<span class="input-group-addon">
@@ -29,12 +29,12 @@
 								<input ng-model="ctrl.model.name" type="text" class="form-control" required/>
 							</div>
 							<p class="help-block">
-								E.g: Team-Kektus.
+								{{ 'CREATEEG' | translate  }}
 							</p>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-3 control-label">Project name</label>
+						<label class="col-sm-3 control-label">{{ 'TEAMPROJECT' | translate  }}</label>
 						<div class="col-sm-4">
 							<div class="input-group">
 								<span class="input-group-addon">
@@ -43,12 +43,12 @@
 								<input ng-model="ctrl.model.project_name" type="text" class="form-control" required/>
 							</div>
 							<p class="help-block">
-								E.g: Grading system.
+								{{ 'CREATEEG2' | translate  }}
 							</p>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-3 control-label">Repository url</label>
+						<label class="col-sm-3 control-label">{{ 'TEAMURL' | translate  }}</label>
 						<div class="col-sm-4">
 							<div class="input-group">
 								<span class="input-group-addon">
@@ -62,7 +62,7 @@
 						</div>
 					</div>
 					<div class="form-group ">
-						<label class="col-sm-3 control-label">Staging environment url</label>
+						<label class="col-sm-3 control-label">{{ 'TEAMENV' | translate  }}</label>
 						<div class="col-sm-4">
 							<div class="input-group">
 								<span class="input-group-addon">
@@ -78,8 +78,8 @@
 					<div class="form-actions">
 						<div class="row">
 							<div class="col-md-offset-3 col-md-9">
-								<button type="submit" class="btn purple"><i class="fa fa-check"></i> Submit</button>
-								<button type="button" class="btn default">Cancel</button>
+								<button type="submit" class="btn purple"><i class="fa fa-check"></i> {{ 'ACCSUB' | translate  }}</button>
+								<button type="button" class="btn default">{{ 'ACCCANCEL' | translate  }}</button>
 							</div>
 						</div>
 					</div>
