@@ -31,11 +31,16 @@ export default function RoutingConfig($locationProvider, $urlRouterProvider, $st
       }
     })
 
+    .state('protected-wrapper', {
+      abstract: true,
+      template: require('../abstract_views/protected.template.html')
+    })
+
     .state('protected', {
+      parent: 'protected-wrapper',
       abstract: true,
       resolve: {
         currentUser: function ($rootScope, $state, Api) {
-          console.log('resolving protected');
           return Api.getAccount().then(result => {
             $rootScope.currentUser = result.data
             $rootScope.currentTeam = $rootScope.currentUser.team
@@ -46,8 +51,17 @@ export default function RoutingConfig($locationProvider, $urlRouterProvider, $st
         }
       },
       views: {
-        '': {
-          template: require('../abstract_views/protected.template.html')
+        'header': {
+          template: require('../layout_parts/header.template.html')
+        },
+        'sidebar': {
+          template: require('../layout_parts/sidebar.template.html')
+        },
+        'content': {
+          template: '<ui-view />'
+        },
+        'footer': {
+          template: require('../layout_parts/footer.template.html')
         }
       }
     })

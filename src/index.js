@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap-theme.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min'
 import 'font-awesome/css/font-awesome.css'
 import 'simple-line-icons/css/simple-line-icons.css'
 
