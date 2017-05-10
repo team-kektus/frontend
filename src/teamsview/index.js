@@ -4,7 +4,7 @@ import routing from './routing'
 import TeamsController from './children/teams.controller'
 import CreateTeamController from './children/createteam.controller'
 
-angular.module('kektus.teamsview', [
+export default angular.module('kektus.teamsview', [
 
 ])
 .controller('TeamsMainController', Controller)

@@ -3,7 +3,7 @@ import routing from './routing'
 
 import SettingsController from './children/settings.controller'
 
-angular.module('kektus.myteam', [
+export default angular.module('kektus.myteam', [
 
 ])
 .controller('MyTeamController', Controller)

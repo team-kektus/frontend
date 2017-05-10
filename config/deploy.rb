@@ -56,13 +56,22 @@ namespace :deploy do
   end
 
 
-  task :restart_app do
+  task :install_deps do
     on roles(:app) do
-      execute "pm2 startOrRestart #{user_path}/pm2_conf/frontend.ecosystem.json"
+      execute "cd #{project_path}/current && npm install"
+    end
+  end
+
+
+  task :build_app do
+    on roles(:app) do
+      # execute "pm2 startOrRestart #{user_path}/pm2_conf/welcome.ecosystem.json"
+      execute "cd #{project_path}/current && npm run build"
     end
   end
 
   before :starting, :remove_deps
   after :publishing, :add_deps
-  after :finished, :restart_app
+  after :finished, :install_deps
+  after :install_deps, :build_app
 end

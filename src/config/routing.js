@@ -7,12 +7,6 @@ export default function RoutingConfig($locationProvider, $urlRouterProvider, $st
     .state('root', {
       resolve: {
         redirect: function ($rootScope, $location) {
-          console.log('resolving root');
-          // $location.search()
-          console.log("asd");
-          console.log($rootScope);
-          console.log($location);
-
           if ('currentUser' in $rootScope) {
             path = '/'
           }
@@ -58,7 +52,7 @@ export default function RoutingConfig($locationProvider, $urlRouterProvider, $st
           template: require('../layout_parts/sidebar.template.html')
         },
         'content': {
-          template: '<ui-view />'
+          template: '<div ui-view class="fade-in-up"></div>'
         },
         'footer': {
           template: require('../layout_parts/footer.template.html')

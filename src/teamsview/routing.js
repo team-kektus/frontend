@@ -7,7 +7,7 @@ export default function routing($stateProvider) {
       views: {
         '': {
           template: require('./template.html'),
-          controller: 'TeamsController',
+          controller: 'TeamsMainController',
           controllerAs: 'ctrl'
         }
       }
