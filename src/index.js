@@ -45,9 +45,8 @@ angular.module('kektus', [
   accountview,
   mainview,
   gradingview,
-  // teamsview,
-  // myteamview,
-  // adminview,
+  adminview,
+
 ])
 
 .service('Api', Api)
