@@ -7,14 +7,13 @@ export default function RoutingConfig($locationProvider, $urlRouterProvider, $st
     .state('root', {
       resolve: {
         redirect: function ($rootScope, $location) {
+          let path;
           if ('currentUser' in $rootScope) {
             path = '/'
           }
           else {
             path = '/login/'
           }
-
-          console.log("path");
 
           if (path != $location.$$path) {
             $location.path(path)
