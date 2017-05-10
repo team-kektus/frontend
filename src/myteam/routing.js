@@ -13,14 +13,14 @@ export default function routing($stateProvider) {
         }
       },
       resolve: {
-        hasTeam: function (currentUser, $state) {
+        hasTeam: ['currentUser', '$state', function (currentUser, $state) {
           this.$inject = ['currentUser', '$state']
-          
+
           if (!currentUser.team) {
             window.alert('You are not subscribed to any team. Ask professor to sign you into a team.')
             $state.go('root')
           }
-        }
+        }]
       }
     })
 

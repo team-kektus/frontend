@@ -6,7 +6,7 @@ export default function RoutingConfig($locationProvider, $urlRouterProvider, $st
   $stateProvider
     .state('root', {
       resolve: {
-        redirect: function ($rootScope, $location) {
+        redirect: ['$rootScope', '$location', function ($rootScope, $location) {
           let path;
           if ('currentUser' in $rootScope) {
             path = '/'
@@ -20,7 +20,7 @@ export default function RoutingConfig($locationProvider, $urlRouterProvider, $st
           } else {
             window.location.reload()
           }
-        }
+        }]
       }
     })
 
@@ -33,7 +33,7 @@ export default function RoutingConfig($locationProvider, $urlRouterProvider, $st
       parent: 'protected-wrapper',
       abstract: true,
       resolve: {
-        currentUser: function ($rootScope, $state, Api) {
+        currentUser: ['$rootScope', '$state', 'Api', function ($rootScope, $state, Api) {
           return Api.getAccount().then(result => {
             $rootScope.currentUser = result.data
             $rootScope.currentTeam = $rootScope.currentUser.team
@@ -41,7 +41,7 @@ export default function RoutingConfig($locationProvider, $urlRouterProvider, $st
           }).catch(() => {
             $state.go('root')
           })
-        }
+        }]
       },
       views: {
         'header': {
@@ -68,10 +68,10 @@ export default function RoutingConfig($locationProvider, $urlRouterProvider, $st
       abstract: true,
       parent: 'protected',
       resolve: {
-        isProfessor: function (currentUser, $state) {
+        isProfessor: ['currentUser', '$state', function (currentUser, $state) {
           if (!currentUser.is_professor)
             $state.go('not-found')
-        }
+        }]
       },
       template: '<ui-view />'
     })
@@ -80,10 +80,10 @@ export default function RoutingConfig($locationProvider, $urlRouterProvider, $st
       abstract: true,
       parent: 'protected',
       resolve: {
-        isAdmin: function (currentUser, $state) {
+        isAdmin: ['currentUser', '$state', function (currentUser, $state) {
           if (!currentUser.is_admin)
             $state.go('not-found')
-        }
+        }]
       },
       template: '<ui-view />'
     })
