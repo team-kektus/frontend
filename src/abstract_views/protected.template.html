@@ -1,0 +1,54 @@
+<!-- BEGIN HEADER -->
+<!-- <ng-include src="'layout_parts/header.template.html'" class="page-header md-shadow-z-1-i navbar navbar-fixed-top" /> -->
+<div ui-view="header" class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
+
+</div>
+<!-- END HEADER -->
+
+<div class="clearfix">
+</div>
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+  <!-- BEGIN SIDEBAR -->
+  <!-- <ng-include src="'layout_parts/sidebar.template.html'" class="page-sidebar-wrapper" /> -->
+  <div ui-view="sidebar" class="page-sidebar-wrapper">
+
+  </div>
+  <!-- END SIDEBAR -->
+  <div class="page-content-wrapper">
+    <div class="page-content">
+      <!-- BEGIN PAGE HEAD -->
+
+      <!-- END PAGE HEAD -->
+      <!-- BEGIN ACTUAL CONTENT -->
+      <div ui-view="content">
+      </div>
+      <!-- END ACTUAL CONTENT -->
+    </div>
+  </div>
+</div>
+<!-- END CONTAINER -->
+
+<!-- BEGIN FOOTER -->
+<!-- <ng-include src="'layout_parts/footer.template.html'" class="page-footer" /> -->
+<div ui-view="footer" class="page-footer">
+
+</div>
+<!-- END FOOTER -->
+
+<!-- Bottom navbar -->
+<div id="bottom_bar">
+  <ul class="buttons">
+    <a class="button ois" href="http://ois.ut.ee" target="_blank">
+      <span>ÕIS</span>
+    </a>
+    <a class="button moodle" href="http://moodle.ut.ee" target="_blank">
+      <span>Moodle</span>
+    </a>
+  </ul>
+
+  <ul class="settings">
+
+  </ul>
+</div>

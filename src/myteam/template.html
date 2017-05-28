@@ -1,0 +1,78 @@
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+	<li>
+		<a href="#">{{ 'ACCHOME' | translate  }}</a><i class="fa fa-circle"></i>
+	</li>
+	<li class="active">
+		{{ 'SITEAM' | translate  }}
+	</li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+
+
+<!-- BEGIN PAGE CONTENT-->
+<div class="row" ng-controller="MyTeamController as ctrl">
+	<div class="col-md-12">
+		<!-- BEGIN PROFILE SIDEBAR -->
+		<div class="profile-sidebar">
+			<!-- PORTLET MAIN -->
+			<div class="portlet light profile-sidebar-portlet">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img ng-src="{{ currentTeam.avatar }}" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						{{ currentTeam.name }}
+					</div>
+					<div class="profile-usertitle-job">
+						{{ currentTeam.project_name }}
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li ng-class="{active: $state.includes('team.dashboard')}">
+							<a ui-sref="team.dashboard">
+							<i class="icon-home"></i>
+							{{ 'ADOVER' | translate  }} </a>
+						</li>
+						<li ng-class="{active: $state.includes('team.settings')}">
+							<a ui-sref="team.settings">
+							<i class="icon-settings"></i>
+							{{ 'TEAMSET' | translate  }} </a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
+			<!-- END PORTLET MAIN -->
+			<!-- PORTLET MAIN -->
+			<div class="portlet light">
+				<div>
+					<h4 class="profile-desc-title">About {{ currentTeam.name }}</h4>
+					<span class="profile-desc-text"> {{ currentTeam.description }} </span>
+					<div class="margin-top-20 profile-desc-link" ng-show="currentTeam.staging_url">
+						<i class="fa fa-globe"></i>
+						<a href="//{{ currentTeam.staging_url }}">{{ currentTeam.staging_url }}</a>
+					</div>
+					<div class="margin-top-20 profile-desc-link" ng-show="currentTeam.repository_url">
+						<i class="fa fa-github"></i>
+						<a href="//{{ currentTeam.repository_url }}">{{ currentTeam.repository_url }}</a>
+					</div>
+				</div>
+			</div>
+			<!-- END PORTLET MAIN -->
+		</div>
+		<!-- END BEGIN PROFILE SIDEBAR -->
+		<!-- BEGIN PROFILE CONTENT -->
+		<div ui-view class="profile-content fade-in-up">
+		</div>
+		<!-- END PROFILE CONTENT -->
+	</div>
+</div>
+<!-- END PAGE CONTENT-->

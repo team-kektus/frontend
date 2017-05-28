@@ -1,0 +1,242 @@
+<!-- BEGIN PORTLET -->
+<div class="portlet light">
+  <div class="portlet-title">
+    <div class="caption caption-md">
+      <i class="icon-bar-chart theme-font hide"></i>
+      <span class="caption-subject font-blue-madison bold uppercase">All users</span>
+      <span class="caption-helper hide">weekly stats...</span>
+    </div>
+    <!-- <div class="actions">
+      <div class="btn-group btn-group-devided" data-toggle="buttons">
+        <label class="btn btn-transparent grey-salsa btn-circle btn-sm active">
+        <input type="radio" name="options" class="toggle" id="option1">Today</label>
+        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+        <input type="radio" name="options" class="toggle" id="option2">Week</label>
+        <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+        <input type="radio" name="options" class="toggle" id="option2">Month</label>
+      </div>
+    </div> -->
+    <div class="actions">
+      <div class="form-group">
+        <label class="control-label">Search</label>
+        <div>
+          <div class="input-group">
+            <span class="input-group-addon">
+  					  <i class="fa fa-search"></i>
+  					</span>
+            <input type="text" class="form-control" ng-model="queryString" autofocus/>
+          </div>
+          <p class="help-block">
+            E.g: John Doe</code>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="portlet-body">
+    <div class="table-scrollable table-scrollable-borderless">
+      <table class="table table-hover table-light">
+        <thead>
+          <tr class="uppercase">
+            <th colspan="2">
+              User
+            </th>
+            <th>
+              Professor
+            </th>
+            <th>
+              Admin
+            </th>
+            <th>
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tr ng-repeat="user in ctrl.users | filter:queryString">
+          <td class="fit">
+            <img class="user-pic" ng-src="{{ user.avatar }}">
+          </td>
+          <td>
+            <a href="#" class="primary-link" ng-click="ctrl.showUserDetails(user)">{{ user.full_name }}</a>
+          </td>
+          <td>
+            {{ user.is_professor }}
+          </td>
+          <td>
+            {{ user.is_admin }}
+          </td>
+          <!-- <td>
+            124
+          </td> -->
+          <!-- <td>
+            <span class="bold theme-font">80%</span>
+          </td> -->
+        </tr>
+
+      </table>
+    </div>
+  </div>
+</div>
+<!-- END PORTLET -->
+
+
+
+
+
+
+
+
+
+
+
+<div id="userModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- BEGIN PROFILE SIDEBAR -->
+            <div class="profile-sidebar">
+              <!-- PORTLET MAIN -->
+              <div class="portlet light profile-sidebar-portlet">
+                <!-- SIDEBAR USERPIC -->
+                <div class="profile-userpic">
+                  <img ng-src="{{ openedUser.avatar }}" class="img-responsive img-circle" alt="">
+                </div>
+                <!-- END SIDEBAR USERPIC -->
+                <!-- SIDEBAR USER TITLE -->
+                <div class="profile-usertitle">
+                  <div class="profile-usertitle-name">
+                    {{ openedUser.full_name }}
+                  </div>
+                  <div class="profile-usertitle-job">
+                    {{ openedUser.team.name }}
+                  </div>
+                  <span ng-show="currentUser.id == openedUser.id" class="label label-danger">You are modifying your own account!</span>
+                </div>
+                <!-- END SIDEBAR USER TITLE -->
+                <!-- SIDEBAR MENU -->
+                <div class="profile-usermenu">
+                  <ul class="nav">
+                    <!-- <li ng-class="{active: $state.includes('profile.dashboard')}">
+        							<a ui-sref="profile.dashboard">
+        							<i class="icon-home"></i>
+        							Overview </a>
+        						</li>
+        						<li ng-class="{active: $state.includes('profile.account')}">
+        							<a ui-sref="profile.account">
+        							<i class="icon-settings"></i>
+        							User Settings </a>
+        						</li> -->
+                  </ul>
+                </div>
+                <!-- END MENU -->
+              </div>
+              <!-- END PORTLET MAIN -->
+            </div>
+            <!-- END BEGIN PROFILE SIDEBAR -->
+            <!-- BEGIN PROFILE CONTENT -->
+            <div class="profile-content fade-in-up">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="portlet light">
+                    <div class="portlet-title tabbable-line">
+                      <div class="caption caption-md">
+                        <i class="icon-globe theme-font hide"></i>
+                        <span class="caption-subject font-blue-madison bold uppercase">Profile Account</span>
+                      </div>
+                      <ul class="nav nav-tabs">
+                        <li class="active">
+                          <a href="#" data-target="#tab_1_1" data-toggle="tab">Permission Settings</a>
+                        </li>
+                        <li>
+                          <a href="#" data-target="#tab_1_2" data-toggle="tab">Team Settings</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="portlet-body">
+                      <div class="tab-content">
+
+                        <!-- USER PERMISSIONS SETTINGS TAB -->
+                        <div class="tab-pane active" id="tab_1_1">
+                          <form action="#">
+                            <table class="table table-light table-hover">
+                              <tr>
+                                <td>
+                                  Professor?
+                                </td>
+                                <td>
+                                  <label class="uniform-inline">
+              										<input type="checkbox" ng-model="ctrl.model.is_professor" /> Yes </label>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  Admin?
+                                </td>
+                                <td>
+                                  <label class="uniform-inline">
+              										<input type="checkbox" ng-model="ctrl.model.is_admin" /> Yes </label>
+                                </td>
+                              </tr>
+                            </table>
+                            <!--end profile-settings-->
+                            <div class="margin-top-10">
+                              <a href="#" class="btn green-haze" ng-click="ctrl.updatePermissions(openedUser.id)">
+              								Save Changes </a>
+                              <a href="#" class="btn default">
+              								Cancel </a>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- END USER PERMISSIONS SETTINGS TAB -->
+
+                        <!-- USER TEAM SETTINGS TAB -->
+                        <div class="tab-pane" id="tab_1_2">
+                          <form class="form-horizontal" role="form">
+                  					<div class="form-body">
+                  						<div class="form-group">
+                  							<label class="col-md-3 control-label">Team:</label>
+                  							<div class="col-md-9">
+                  								<ui-select ng-model="ctrl.model.team" theme="bootstrap">
+            						            <ui-select-match placeholder="Select a team">{{ $select.selected.name }}</ui-select-match>
+            						            <ui-select-choices repeat="team in ctrl.teams | filter: $select.search">
+            						              <div>{{ team.name }}</div>
+            						              <small>{{ team.project_name }}</small>
+            						            </ui-select-choices>
+            						          </ui-select>
+                  							</div>
+                  						</div>
+
+
+                  						<div class="form-actions">
+                  							<div class="row">
+                  								<div class="col-md-offset-3 col-md-9">
+                  									<button type="submit" class="btn green" ng-click="ctrl.addToTeam(openedUser.id)">Submit</button>
+                  									<button type="button" class="btn default">Cancel</button>
+                  								</div>
+                  							</div>
+                  						</div>
+                  					</div>
+                  				</form>
+                        </div>
+                        <!-- END USER TEAM SETTINGS TAB -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- END PROFILE CONTENT -->
+          </div>
+        </div>
+        <!-- END PAGE CONTENT-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
+      </div>
+    </div>
+  </div>
+</div>
